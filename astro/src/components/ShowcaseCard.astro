@@ -1,0 +1,25 @@
+---
+interface Props {
+	title: string;
+	body: string;
+	href: string;
+    image: string;
+}
+
+const { href, title, body, image } = Astro.props;
+---
+
+<div class="cardContainer flex flex-col w-52">
+    <a href={href}>
+        <div class="cardImage">
+            <img src={image}/>
+        </div>
+        <div class="cardTitle">
+            <h3>{title}</h3>
+        </div>
+        <div class="body">{body}
+        </div>
+    </a>    
+
+
+</div>
