@@ -17,10 +17,10 @@ const { href, title, body, image } = Astro.props;
 	</head>
 	<header>
 	</header>
-	<main>
+	<body>
 		<Navbar/>
 		<Hero/>
-		<div class="showcase flex flex-row columns-2 flex-wrap gap-6 object-center justify-evenly w-full bg-pink-500">
+		<div class="showcase flex flex-row columns-2 flex-wrap gap-6 object-center justify-evenly w-min-800px bg-pink-500">
 			<ShowcaseCard 
 				href="https://astro.build/chat/"
 				title="A Great Heron"
@@ -58,7 +58,7 @@ const { href, title, body, image } = Astro.props;
 				image='https://images.pexels.com/photos/17824719/pexels-photo-17824719/free-photo-of-heron-in-a-stream.jpeg'
 			/>
 		</Showcase>
-	</main>
+	</body>
 	<footer>
 		<Footer/>
 	</footer>
