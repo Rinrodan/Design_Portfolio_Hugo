@@ -1,25 +1,27 @@
 ---
 interface Props {
 	title: string;
-	body: string;
+	content: string;
 	href: string;
-    image: string;
+    image: string
 }
 
-const { href, title, body, image } = Astro.props;
+const { href, title, content, image } = Astro.props;
 ---
 
-<div class="cardContainer flex flex-col w-52">
-    <a href={href}>
-        <div class="cardImage">
-            <img src={image}/>
-        </div>
-        <div class="cardTitle">
-            <h3>{title}</h3>
-        </div>
-        <div class="body">{body}
-        </div>
-    </a>    
-
-
-</div>
+<div class="cardContainer flex flex-col w-52 h-52 bg-green-200 m-auto mt-52">
+    <div 
+    class=" group inline-block rounded bg-danger"
+    title={title}
+  ></div>
+    <div class="cardTitle z-1">
+        <h3 class="z-1">{title}</h3>
+    </div>
+    <div class="cardImage flex m-auto overflow-hidden ">
+        <img src={image} class="flex z-0 bg-red-700 m-aut w-full object-cover overflow-hidder rounded-lg"/>
+    </div>            
+    
+    <div class="popover hidden group-hover:block bg-white border border-gray-300 ">
+        <p class="text-gray-700">This is some additional content.</p>
+    </div>
+</div>    
