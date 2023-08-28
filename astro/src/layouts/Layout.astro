@@ -7,7 +7,7 @@ const { title } = Astro.props;
 ---
 
 <!DOCTYPE html>
-<html lang="en" class="flex flex-col justify-center max-w-7xl">
+<html lang="en" class="flex flex-col justify-center max-w-7xl bg-colorBG">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="description" content="Astro description">
@@ -16,7 +16,7 @@ const { title } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body class="flex flex-col justify-self-center m-auto">
+	<body class="flex flex-col justify-self-center m-auto mb-52 bg-red-100 text-colorText">
 		<slot />
 	</body>
 </html>
@@ -29,8 +29,7 @@ const { title } = Astro.props;
 	}
 	html {
 		
-		font-family: system-ui, sans-serif;
-		background: #13151A;	
+		font-family: system-ui, sans-serif;	
 	}
 	code {
 		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
