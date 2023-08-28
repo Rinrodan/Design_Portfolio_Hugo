@@ -9,9 +9,9 @@ interface Props {
 const { href, title, content, image } = Astro.props;
 ---
 
-<div class="cardContainer flex flex-col w-52 h-52 m-auto bg-white">
+<div class="cardContainer flex flex-col w-52 h-52 bg-green-200 m-auto mt-52">
     <div 
-    class="inline-block rounded"
+    class=" group inline-block rounded bg-danger"
     title={title}
   ></div>
     <div class="cardTitle z-1">
@@ -21,4 +21,7 @@ const { href, title, content, image } = Astro.props;
         <img src={image} class="flex z-0 bg-red-700 m-aut w-full object-cover overflow-hidder rounded-lg"/>
     </div>            
     
+    <div class="popover hidden group-hover:block bg-white border border-gray-300 ">
+        <p class="text-gray-700">This is some additional content.</p>
+    </div>
 </div>    

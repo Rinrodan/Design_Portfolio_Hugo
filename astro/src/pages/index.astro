@@ -7,7 +7,6 @@ import Footer from '../components/Footer.astro';
 import Showcase from '../components/Showcase.astro'
 import ShowcaseCard from '../components/ShowcaseCard.astro';
 
-
 const { href, title, body, image } = Astro.props;
 
 ---
@@ -16,13 +15,12 @@ const { href, title, body, image } = Astro.props;
 	<head>
 
 	</head>
-	<header class="h-max">
-		<Hero/>
-
+	<header>
 	</header>
 	<body>
 		<Navbar/>
-		<div class="showcase flex flex-row columns-2 flex-wrap gap-6 object-center justify-evenly pt-10">
+		<Hero/>
+		<div class="showcase flex flex-row columns-2 flex-wrap gap-6 object-center justify-evenly w-min-800px bg-pink-500">
 			<ShowcaseCard 
 				href="https://astro.build/chat/"
 				title="A Great Heron"
