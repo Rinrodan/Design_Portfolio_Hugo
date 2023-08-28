@@ -31,7 +31,7 @@ import Modal from '../components/Modal.astro';
             <main slot='main'>
               <p>Some extra content you would like here</p>
               <hr />
-              <img width='60' height='80' src='~/images/logo-sql.png' alt='Astro logo' />
+              <img width='60' height='80' src='https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Inkscape_Logo.svg/480px-Inkscape_Logo.svg.png' />
             </main>
             <button slot='close'>Close modal</button>
           </Modal>
@@ -50,9 +50,28 @@ import Modal from '../components/Modal.astro';
             logo4Title='React'
             logo4Comment="I love Inkscape adslfkadsf lkjasf kasd lkjad ;lajkds flkjads f"
             favoriteAspect='React'
-
+          
           />
+          <button id="button" class="block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">
+            Toggle modal
+          </button>
+
         </div>
       </div>
     </div>
+    <script>
+      import { Modal } from 'flowbite'
+    
+      // select the two elements that we'll work with
+      const $buttonElement: HTMLElement | null = document.querySelector('#button');
+      const $modalElement: HTMLElement | null = document.querySelector('#defaultModal');
+    
+      // create a new modal component
+      const modal = new Modal($modalElement);
+    
+      // toggle the visibility of the modal when clicking on the button
+      if ($buttonElement) {
+        $buttonElement.addEventListener('click', () => modal.toggle());
+      }
+    </script>
   </section>
