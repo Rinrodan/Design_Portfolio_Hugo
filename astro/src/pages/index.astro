@@ -17,10 +17,11 @@ const { href, title, body, image } = Astro.props;
 	</head>
 	<header>
 	</header>
-	<main>
-		<Navbar/>
+	<main class="flex flex-col m-auto w-3/6">
+		
 		<Hero/>
-		<div class="showcase flex flex-row columns-2 flex-wrap gap-6 object-center justify-evenly w-full bg-pink-500">
+		<Navbar/>
+		<div class="showcase grid gap-6 grid-cols-1 sm:max-3xl:grid-cols-2 w-4/6 sm:max-3xl:w-full content-center m-auto justify-evenly h-max">
 			<ShowcaseCard 
 				href="https://astro.build/chat/"
 				title="A Great Heron"

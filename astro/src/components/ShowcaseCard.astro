@@ -9,19 +9,22 @@ interface Props {
 const { href, title, content, image } = Astro.props;
 ---
 
-<div class="cardContainer flex flex-col w-52 h-52 bg-green-200 m-auto mt-52">
-    <div 
-    class=" group inline-block rounded bg-danger"
-    title={title}
-  ></div>
-    <div class="cardTitle z-1">
-        <h3 class="z-1">{title}</h3>
-    </div>
-    <div class="cardImage flex m-auto overflow-hidden ">
-        <img src={image} class="flex z-0 bg-red-700 m-aut w-full object-cover overflow-hidder rounded-lg"/>
-    </div>            
+<div class="cardContainer grid grid-cols-1 gap-4 w-full lg:max-2xl:gap-8 h-max m-auto">
     
-    <div class="popover hidden group-hover:block bg-white border border-gray-300 ">
-        <p class="text-gray-700">This is some additional content.</p>
-    </div>
+    <a href="#" class="block">
+        <img
+          alt="Signage"
+          src={image}
+          class="h-56 w-full rounded-bl-3xl rounded-tr-3xl object-cover sm:h-64 lg:max-2xl:h-72"
+        />
+      
+        <div class="mt-4 sm:flex sm:items-center sm:justify-center sm:gap-4 ">
+          <div class="w-full">{title}</div>
+      
+          <span class="hidden sm:block sm:h-px sm:w-8 sm:bg-yellow-500"></span>
+      
+          <p class="mt-0.5 opacity-50 sm:mt-0 text-xs">Github</p>
+        </div>
+      </a>
+
 </div>    
