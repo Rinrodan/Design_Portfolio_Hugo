@@ -17,11 +17,11 @@ const { href, title, body, image } = Astro.props;
 	</head>
 	<header>
 	</header>
-	<main class="flex flex-col m-auto w-3/6">
+	<main >
 		
 		<Hero/>
 		<Navbar/>
-		<div class="showcase grid gap-6 grid-cols-1 sm:max-3xl:grid-cols-2 w-4/6 sm:max-3xl:w-full content-center m-auto justify-evenly h-max">
+		<div class="showcase grid gap-6 grid-cols-1 lg:max-3xl:grid-cols-2 w-4/6 sm:max-3xl:w-full content-center m-auto justify-evenly h-max">
 			<ShowcaseCard 
 				href="https://astro.build/chat/"
 				title="A Great Heron"
@@ -58,6 +58,13 @@ const { href, title, body, image } = Astro.props;
 				content="kjhgjkhuytuyg uyg uy uy yu gu g  ugy gkuyg k"
 				image='https://images.pexels.com/photos/17824719/pexels-photo-17824719/free-photo-of-heron-in-a-stream.jpeg'
 			/>
+			</div>
+			<a href="/">
+			<div class="flex w-full rounded-full m-auto mt-10">
+				<div class="flex relative z-0 bg-white w-10 h-7 rounded-full m-auto -mr-12"></div>
+				<svg class="z-10" xmlns="http://www.w3.org/2000/svg" height="3em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM377 271c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-87-87-87 87c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9L239 167c9.4-9.4 24.6-9.4 33.9 0L377 271z"/></svg>
+			</div>
+		</a>
 		</Showcase>
 	</main>
 	<footer>

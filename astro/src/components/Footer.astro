@@ -2,17 +2,50 @@
 
 ---
 
-<div id="contact" class="flex flex-row w- h-22 bg-opacity-50 justify-center flex-wrap text-zinc-100">
+<div id="contact" class="flex ">
   
-    <div class="flex flex-row w-auto m-auto gap-7">
-        <a href="google.com" class=" flex w-40 m-1 bg-opacity-90 text-center border-y-2 border-opacity-25 justify-center transition ease-in-out hover:scale-110 hover:font-semibold hover:-translate-y-1 ">
+    <div class="contactButtons flex flex-col sm:max-3xl:flex-row sm:max-3xl:w-full justify-between align-middle h-52 bg-opacity-50 text-zinc-100 m-auto mt-20 mb-12 w-4/6">
+        <a href="google.com" class="contactButton">
             EMAIL
         </a>
-        <a href="google.com" class=" flex w-40 m-1 bg-opacity-90 text-center border-y-2 border-opacity-25 justify-center transition ease-in-out hover:scale-110 hover:font-semibold hover:-translate-y-1 ">
-            SOCIAL
+        <a href="google.com" class="contactButton">
+        SOCIAL
         </a>
-        <a href="google.com" class=" flex w-40 m-1 bg-opacity-90 text-center border-y-2 border-opacity-25 justify-center transition ease-in-out hover:scale-110 hover:font-semibold hover:-translate-y-1 ">
+        <a href="google.com" class="contactButton">
             LINKEDiN
         </a>
     </div>
 </div>
+
+<style>
+    .contactButton {
+        display:flex;
+        width: 30%;
+        max-width: 20rem;
+        margin: auto;
+        background-color:rgba(33, 25, 56, 0.363);
+        text-align: center;
+        border-top: 2px solid rgba(255, 255, 255, 0.651);
+        border-bottom: 2px solid rgba(255, 255, 255, 0.651);
+        justify-content: center;
+        transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+        
+        transition: 150ms;
+        transition-timing-function: ease;
+    }
+    @media (max-width: 640px) {
+        .contactButton {
+            width: 100%;  }}
+    @media (min-width: 640px) {
+        .contactButton {
+            width: 25%;  
+            margin: auto;
+            border-top: 0px solid rgba(255, 255, 255, 0.651);
+        border-bottom: 0px solid rgba(255, 255, 255, 0.651);
+        border-left: 2px solid rgba(255, 255, 255, 0.651);
+        border-right: 2px solid rgba(255, 255, 255, 0.651); }}
+    .contactButton:hover {
+        scale: 125%;
+        font-weight: 700;
+    }
+</style>
