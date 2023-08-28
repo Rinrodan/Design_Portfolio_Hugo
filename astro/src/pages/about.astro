@@ -3,7 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.astro';
 const title = "About";
-import Modal from '../components/Modal.astro';
+
 ---
 
 <Layout title={title}>
@@ -12,9 +12,9 @@ import Modal from '../components/Modal.astro';
 	</head>
 	<header>
 	</header>
-	<body class="flex flex-col m-auto h-full">
+	<body class="flex flex-col m-auto w-4/6 h-full">
         <Navbar/>
-        <Modal modalButtonTitle="adsflkj" modalBody='flaksdfj' modalTitle='Modal Title' />
+        
         <div class="block w-full h-auto text-xl drop-shadow-xl shadow-black">
             <div class="flex w-3/6 h-max m-auto">
                 <img class="flex w-full h-auto m-auto" src="https://img.rankedboost.com/wp-content/plugins/super-smash-bros-ultimate/assets/character-images-main/Mario_SSBU.png"/>
