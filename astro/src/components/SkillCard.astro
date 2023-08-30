@@ -1,0 +1,47 @@
+---
+interface Props {
+    area: string;
+	favoriteAspect: string;
+    logo1: string;
+    logo1Title: string;
+    logo1Comment: string;
+    logo2: string;
+    logo2Title: string;
+    logo2Comment: string;
+    logo3: string;
+    logo3Title: string;
+    logo3Comment: string;
+    logo4: string;
+    logo4Title: string;
+    logo4Comment: string;
+
+}
+
+const { area, favoriteAspect, logo1, logo1Title, logo1Comment, logo2, logo2Title, logo2Comment, logo3, logo3Title, logo3Comment, logo4, logo4Title, logo4Comment } = Astro.props;
+
+---
+
+<div class="skillCard bg-gray-700 rounded-xl p-2">
+    <h2 class="block text-center m-auto font-bold w-full">{area}</h2>
+    <div class="grid grid-cols-2 justify-between gap-2 text-xs sm:max-md:text-sm">
+        <div class="block rounded-lg bg-blue-700"><img class="block w-full h-auto overflow-hidden object-cover bg-white m-auto rounded-t-md" src={logo1}/><p class="m-auto w-max">{logo1Title}</p><div class="hidden hover:block translate-x-5">{logo1Comment}</div></div>
+        <div class="block rounded-lg bg-blue-700"><img class="block w-full h-auto overflow-hidden object-cover bg-white m-auto rounded-t-md" src={logo2}/><p class="m-auto w-max">{logo2Title}</p><div class="hidden hover:block translate-x-5">{logo2Comment}</div></div>
+        <div class="block rounded-lg bg-blue-700"><img class="block w-full h-auto overflow-hidden object-cover bg-white m-auto rounded-t-md" src={logo3}/><p class="m-auto w-max">{logo3Title}</p><div class="hidden hover:block translate-x-5">{logo3Comment}</div></div>
+        <div class="block rounded-lg bg-blue-700"><img class="block w-full h-auto overflow-hidden object-cover bg-white m-auto rounded-t-md" src={logo4}/><p class="m-auto w-max">{logo4Title}</p>{logo4Comment}</div></div>
+        <!-- Button trigger modal -->
+    
+  
+  
+        <p class="hidden sm:mt-1 sm:block sm:text-sm sm:text-gray-600">{favoriteAspect} </p>
+    </div>
+</div>
+
+<style>
+  dialog {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+  }
+</style>

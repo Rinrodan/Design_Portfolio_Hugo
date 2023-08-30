@@ -1,0 +1,58 @@
+---
+import SkillCard from '../components/SkillCard.astro';
+import Modal from '../components/Modal.astro';
+
+---
+<section id="skills" class="flex flex-col">
+  <h2 class="sectionTitle">Skills</h2>
+<div class="flex flex-col">
+    <div class="max-w-screen-xl ">
+      <div class="grid grid-cols-1 gap-y-8 " >
+        <div class="grid grid-cols-2 gap-4 lg:grid-cols-3">
+          <SkillCard
+            area="Cats"
+            logo1='https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Inkscape_Logo.svg/480px-Inkscape_Logo.svg.png'
+            logo1Title='Inkscape'
+            logo1Comment="I love Inkscape adslfkadsf lkjasf kasd lkjad ;lajkds flkjads f"
+            logo2='https://cdn.pixabay.com/photo/2020/01/10/06/54/cat-4754630_1280.png'
+            logo2Title='pspsps'
+            logo2Comment="I love Inkscape adslfkadsf lkjasf kasd lkjad ;lajkds flkjads f"
+            logo3='https://developerpitstop.com/wp-content/uploads/2021/07/React.png'
+            logo3Title='React'
+            logo3Comment="I love Inkscape adslfkadsf lkjasf kasd lkjad ;lajkds flkjads f"
+            logo4='https://developerpitstop.com/wp-content/uploads/2021/07/React.png'
+            logo4Title='React'
+            logo4Comment="I love Inkscape adslfkadsf lkjasf kasd lkjad ;lajkds flkjads f"
+            
+            favoriteAspect='React'
+
+          />
+          <Modal id='dialog' open='Open modal'>
+            <main slot='main'>
+              <p>Some extra content you would like here</p>
+              <hr />
+              <img width='60' height='80' src='~/images/logo-sql.png' alt='Astro logo' />
+            </main>
+            <button slot='close'>Close modal</button>
+          </Modal>
+          <SkillCard
+            area="Graphic Design"
+            logo1='https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Inkscape_Logo.svg/480px-Inkscape_Logo.svg.png'
+            logo1Title='Inkscape'
+            logo1Comment="I love Inkscape adslfkadsf lkjasf kasd lkjad ;lajkds flkjads f"
+            logo2='https://cdn.pixabay.com/photo/2020/01/10/06/54/cat-4754630_1280.png'
+            logo2Title='pspsps'
+            logo2Comment="I love Inkscape adslfkadsf lkjasf kasd lkjad ;lajkds flkjads f"
+            logo3='https://developerpitstop.com/wp-content/uploads/2021/07/React.png'
+            logo3Title='React'
+            logo3Comment="I love Inkscape adslfkadsf lkjasf kasd lkjad ;lajkds flkjads f"
+            logo4='https://developerpitstop.com/wp-content/uploads/2021/07/React.png'
+            logo4Title='React'
+            logo4Comment="I love Inkscape adslfkadsf lkjasf kasd lkjad ;lajkds flkjads f"
+            favoriteAspect='React'
+
+          />
+        </div>
+      </div>
+    </div>
+  </section>

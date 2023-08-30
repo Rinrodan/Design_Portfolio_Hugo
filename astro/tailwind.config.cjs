@@ -6,6 +6,7 @@ module.exports = {
 			screens: {
 				'3xl': '2500px'
 			}
+			
 		},
 	},
 	variants: {

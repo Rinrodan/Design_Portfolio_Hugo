@@ -1,11 +1,52 @@
 ---
 import ShowcaseCard from '../components/ShowcaseCard.astro';
 ---
-
-<div id="showCase" class="showcase  flex flex-row w-full h-max min-h-10 bg-green-500 ">
-<h2 class=" m-auto">Showcase</h2>
-
-
-
-
-</div>
+<section id="showCase" class="flex flex-col">
+    <h2 class="sectionTitle">Showcase</h2>
+    <div class="showcase grid gap-7 grid-cols-1 lg:max-3xl:grid-cols-2 w-4/6 sm:max-3xl:w-full content-center m-auto justify-evenly h-max">
+        <ShowcaseCard 
+        href="https://astro.build/chat/"
+        title="A Great Heron"
+        content="kjhgjkhuytuyg uyg uy uy yu gu g  ugy gkuyg k"
+        image='https://images.pexels.com/photos/17824719/pexels-photo-17824719/free-photo-of-heron-in-a-stream.jpeg'
+        />
+        <ShowcaseCard 
+            href="https://astro.build/chat/"
+            title="A Great Heron"
+            content="kjhgjkhuytuyg uyg uy uy yu gu g  ugy gkuyg k"
+            image='https://images.pexels.com/photos/17815428/pexels-photo-17815428/free-photo-of-portrait-of-a-brown-border-collie-standing-in-a-meadow.jpeg'
+        />
+        <ShowcaseCard 
+            href="https://astro.build/chat/"
+            title="A Great Heron"
+            content="kjhgjkhuytuyg uyg uy uy yu gu g  ugy gkuyg k"
+            image='https://images.pexels.com/photos/17813826/pexels-photo-17813826/free-photo-of-portrait-of-a-pretty-redhead-reading-a-book.jpeg'
+        />
+        <ShowcaseCard 
+            href="https://astro.build/chat/"
+            title="A Great Heron"
+            content="kjhgjkhuytuyg uyg uy uy yu gu g  ugy gkuyg k"
+            image='https://images.pexels.com/photos/17824719/pexels-photo-17824719/free-photo-of-heron-in-a-stream.jpeg'
+        />
+        <ShowcaseCard 
+            href="https://astro.build/chat/"
+            title="A Great Heron"
+            content="kjhgjkhuytuyg uyg uy uy yu gu g  ugy gkuyg k"
+            image='https://images.pexels.com/photos/17824719/pexels-photo-17824719/free-photo-of-heron-in-a-stream.jpeg'
+        />
+        <ShowcaseCard 
+            href="https://astro.build/chat/"
+            title="A Great Heron"
+            content="kjhgjkhuytuyg uyg uy uy yu gu g  ugy gkuyg k"
+            image='https://images.pexels.com/photos/17824719/pexels-photo-17824719/free-photo-of-heron-in-a-stream.jpeg'
+        />
+    </div>
+</section>
+<style>
+    .link-card-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+		gap: 2rem;
+		padding: 0;
+	}
+</style>

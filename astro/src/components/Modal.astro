@@ -1,0 +1,18 @@
+---
+interface Props {
+
+    id: string;
+    open: string;
+}
+
+
+const {id, open} = Astro.props;
+---
+
+<!-- Modal -->
+<dialog id={id}>
+    <slot name="main" />
+    <form method="dialog">
+      <slot name="close" />
+    </form>
+  </dialog>

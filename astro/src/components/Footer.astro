@@ -2,9 +2,9 @@
 
 ---
 
-<div id="contact" class="flex ">
-  
-    <div class="contactButtons flex flex-col sm:max-3xl:flex-row sm:max-3xl:w-full justify-between align-middle h-52 bg-opacity-50 text-zinc-100 m-auto mt-20 mb-12 w-4/6">
+<section id="contact" class="flex flex-col m-auto">
+    <h2 class="sectionTitle">Contact</h2>
+    <div class="contactButtons flex flex-col sm:max-3xl:flex-row sm:max-3xl:w-4/6 justify-between align-middle bg-opacity-50 text-zinc-100 m-auto w-5/6">
         <a href="google.com" class="contactButton">
             EMAIL
         </a>
@@ -15,19 +15,26 @@
             LINKEDiN
         </a>
     </div>
-</div>
+    <a href="/" id="backtotop">
+        <div class="flex w-full rounded-full m-auto pb-6 pt-6">
+            <div class="flex relative z-0 bg-white w-10 h-7 rounded-full m-auto -mr-12"></div>
+            <svg class="z-10" xmlns="http://www.w3.org/2000/svg" height="3em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM377 271c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-87-87-87 87c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9L239 167c9.4-9.4 24.6-9.4 33.9 0L377 271z"/></svg>
+        </div>
+    </a>
+</section>
 
 <style>
     .contactButton {
         display:flex;
         width: 30%;
         max-width: 20rem;
+        min-width: 5rem;
         margin: auto;
         background-color:rgba(33, 25, 56, 0.363);
         text-align: center;
         border-top: 2px solid rgba(255, 255, 255, 0.651);
         border-bottom: 2px solid rgba(255, 255, 255, 0.651);
-        justify-content: center;
+        justify-content:center;
         transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
         
         transition: 150ms;
@@ -39,7 +46,6 @@
     @media (min-width: 640px) {
         .contactButton {
             width: 25%;  
-            margin: auto;
             border-top: 0px solid rgba(255, 255, 255, 0.651);
         border-bottom: 0px solid rgba(255, 255, 255, 0.651);
         border-left: 2px solid rgba(255, 255, 255, 0.651);
@@ -47,5 +53,7 @@
     .contactButton:hover {
         scale: 125%;
         font-weight: 700;
+        background-color: rgba(0, 0, 0, 0.303);
+        box-shadow: 4px 4px 20px black;
     }
 </style>
