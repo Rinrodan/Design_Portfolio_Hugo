@@ -11,30 +11,30 @@ interface Props {
 const { tileTitle, tileImage, modalTitle, modalContent} = Astro.props;
 
 ---
-<div class="flex w-20  text-xs sm:max-md:text-sm">
-    <div class="block rounded-lg bg-blue-100">
+<div class="flex flex-col justify-between max-sm: h-3/12 w-8/12 md:w-5/12 m-2 md:max-3xl:justify-center text-xs sm:max-md:text-sm">
         <button 
         data-modal-toggle="small-modal" 
         class="block 
             w-full md:w-auto text-white
-            bg-blue-100 hover:bg-blue-800 
+            bg-white hover:bg-blue-800 
             focus:ring-4 focus:outline-none
             focus:ring-blue-300 font-medium 
-            rounded-lg text-sm px-5 py-2.5 
+            rounded-lg text-sm
             text-center dark:bg-blue-600 
             dark:hover:bg-blue-700
-            dark:focus:ring-blue-800" 
+            dark:focus:ring-blue-800 " 
         type="button">
-            <img class="block w-full h-auto overflow-hidden object-cover bg-white m-auto rounded-t-md" 
+            <img class="block w-20 h-20 overflow-hidden object-scale bg-white m-auto rounded-t-md" 
             src={tileImage} />
-            <p class="block bg-black w-full">{tileTitle}</p>
+            <p class="block bg-black w-full h-auto m-auto rounded-b-md ">{tileTitle}</p>
         </button>
-        <div id="small-modal" tabindex="-1" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
-        <div class="relative w-full max-w-md max-h-full">
+    <!-- ==========================VVVVVVVVVVVVVVVV modal -->
+        <div id="small-modal" tabindex="-1" class="dialog fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full ">
+        <div class="relative w-full max-w-md max-h-full " >
             <!-- Modal content -->
-            <div class="relative bg-white rounded-lg shadow dark:bg-gray-700 bg-opacity-50">
+            <div class="relative bg-white rounded-lg shadow dark:bg-gray-700 ">
                 <!-- Modal header -->
-                <div class="flex flex-col items-center justify-between p-5 border-b rounded-t dark:border-gray-600">
+                <div class="flex flex-col items-center justify-between p-5 border-b rounded-t dark:border-gray-600 ">
                     <h3 class="flex text-left text-xl font-medium text-gray-900 dark:text-white bg-red-900">
                         {modalTitle}
                     </h3>
@@ -50,12 +50,15 @@ const { tileTitle, tileImage, modalTitle, modalContent} = Astro.props;
                         </span> 
                     </button>
                 </div>
-                    <script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.0/flowbite.min.js">
-                    </script>
+
             </div>
         </div>
-        </div>
     </div>
+        <!-- ================================== ^^^^^^^^^^^^^^^^^^ modal -->
+  
+    
+    <script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.0/flowbite.min.js">
+    </script>
 </div>
 
     <style>
@@ -65,6 +68,6 @@ const { tileTitle, tileImage, modalTitle, modalContent} = Astro.props;
         top: 50%;
         transform: t    nslate(-50%, -50%);
         width: 24rem              
-                    
+
     }
   </style>
