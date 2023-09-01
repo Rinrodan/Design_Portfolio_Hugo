@@ -7,9 +7,69 @@ import Modal from '../components/Modal.astro';
   <h2 class="sectionTitle">Skills</h2>
   <div class="flex flex-col">
     <div class="max-w-screen-xl ">
-      <div class="grid grid-cols-1 gap-y-8 " >
-        <div class="grid grid-cols-2 gap-4 lg:grid-cols-3">
-          <div class="grid grid-cols-2">
+      <div class="grid grid-cols-1 gap-y-8 w-full" >
+        <div class="flex flex-col justify-center w-full m-auto">
+         
+          <div class="grid grid-cols-2 gap-4 lg:grid-cols-3">
+            <div class="skillCard ">
+              <Tile 
+              tileTitle="Super Mario" 
+              tileImage="https://vignette.wikia.nocookie.net/sml/images/c/c0/Mario's_Head.png"
+              modalTitle="title"
+              modalContent="adflkjasd;lfkjasldkf adsf asd fa sdf adsf asdf a dsf asdf asdfadsf asdf adsfa dsf "
+              />
+              <Tile 
+              tileTitle="Tile Title" 
+              tileImage="https://vignette.wikia.nocookie.net/sml/images/c/c0/Mario's_Head.png"
+              modalTitle="title"
+              modalContent="adflkjasd;lfkjasldkf adsf asd fa sdf adsf asdf a dsf asdf asdfadsf asdf adsfa dsf "
+              />
+              <Tile 
+              tileTitle="Tile Title" 
+              tileImage="https://vignette.wikia.nocookie.net/sml/images/c/c0/Mario's_Head.png"
+              modalTitle="title"
+              modalContent="adflkjasd;lfkjasldkf adsf asd fa sdf adsf asdf a dsf asdf asdfadsf asdf adsfa dsf "
+              />
+              <Tile 
+              tileTitle="Tile Title" 
+              tileImage="https://vignette.wikia.nocookie.net/sml/images/c/c0/Mario's_Head.png"
+              modalTitle="title"
+              modalContent="adflkjasd;lfkjasldkf adsf asd fa sdf adsf asdf a dsf asdf asdfadsf asdf adsfa dsf "
+              />
+          </div>
+        <div class="skillCard">
+          <p>asdflkj</p>
+          <div class="grid grid-cols-2 gap-4 lg:grid-cols-3">
+            <div class="skillCard">
+            <Tile 
+            tileTitle="Super Mario" 
+            tileImage="https://vignette.wikia.nocookie.net/sml/images/c/c0/Mario's_Head.png"
+            modalTitle="title"
+            modalContent="adflkjasd;lfkjasldkf adsf asd fa sdf adsf asdf a dsf asdf asdfadsf asdf adsfa dsf "
+            />
+            <Tile 
+            tileTitle="Tile Title" 
+            tileImage="https://vignette.wikia.nocookie.net/sml/images/c/c0/Mario's_Head.png"
+            modalTitle="title"
+            modalContent="adflkjasd;lfkjasldkf adsf asd fa sdf adsf asdf a dsf asdf asdfadsf asdf adsfa dsf "
+            />
+            <Tile 
+            tileTitle="Tile Title" 
+            tileImage="https://vignette.wikia.nocookie.net/sml/images/c/c0/Mario's_Head.png"
+            modalTitle="title"
+            modalContent="adflkjasd;lfkjasldkf adsf asd fa sdf adsf asdf a dsf asdf asdfadsf asdf adsfa dsf "
+            />
+            <Tile 
+            tileTitle="Tile Title" 
+            tileImage="https://vignette.wikia.nocookie.net/sml/images/c/c0/Mario's_Head.png"
+            modalTitle="title"
+            modalContent="adflkjasd;lfkjasldkf adsf asd fa sdf adsf asdf a dsf asdf asdfadsf asdf adsfa dsf "
+            />
+          </div>
+        <div class="skillCard">
+          <p>asdflkj</p>
+          <div class="grid grid-cols-2 gap-4 lg:grid-cols-3">
+          <div class="skillCard">
           <Tile 
           tileTitle="Super Mario" 
           tileImage="https://vignette.wikia.nocookie.net/sml/images/c/c0/Mario's_Head.png"
@@ -34,9 +94,24 @@ import Modal from '../components/Modal.astro';
           modalTitle="title"
           modalContent="adflkjasd;lfkjasldkf adsf asd fa sdf adsf asdf a dsf asdf asdfadsf asdf adsfa dsf "
           />
-        </div>
+       
         </div>
       </div>
     </div>
   </div>
 </section>
+
+<style>
+  .skillCard {
+    display: grid;
+    height: 100%;
+    grid-column: 2;
+    background-color: brown;
+    gap: 2;
+    padding: 2rem;
+    width: auto;
+    align-items: center;
+    margin: auto;
+    }
+  
+</style>
