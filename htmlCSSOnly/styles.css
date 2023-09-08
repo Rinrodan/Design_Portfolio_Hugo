@@ -77,33 +77,65 @@ body {
     
 }
 /* --------------- tooltip */
-.toolTip {
-    position: absolute;
-    display: inline-block;
-    border-bottom: 1px dotted black;
-  }
-  
-  .toolTip .toolTipContent {
+
+
+  .hidden {
     display: none;
-    width: max-content;
-    background-color: black;
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 1rem;
+    object-fit: scale-down;
+  }
+  .hidden img {
+   display: flex;
   
-    /* Position the tooltip */
-    position: absolute;
-    top: 100%;
-    width: 120px;
-    left:50%;
-    z-index: 99;
-    margin-left: 0;
+   width: 90%;
+   height: min-content;
+   margin: auto;
+   padding-bottom: 3rem;
+
+  
   }
   
-  .tooltip:hover .toolTipContent {
-    display: block;
+  .buttonLabel {
+    &:hover {
+      
+      cursor: pointer;
+    }
   }
+  
+  #buttonCheck:checked {
+    &+div.shadow {
+      display: block;
+      z-index: 10;
+      width: 100%;
+      height: 100%;
+      position: fixed;
+      top: 0px;
+      margin-top: 0px;
+      margin-left: 0px;
+      padding: 30%;
+      backdrop-filter: blur(2px);
+      &+div {
+        display: block;
+        border-radius: 4px;
+        width: 50%;
+        border: 1px solid black;
+        z-index: 100;
+        background-color: #ccc;
+        position: fixed;
+        margin-left: 25%;
+        margin-top: 0px;
+        height: 80%;
+        top: 20px;
+        overflow: scroll;
+        padding: 1rem;
+      }
+    }
+  }
+
+
+
+
+
+
 
 /* xxxxxxxxxxxxxxxxxxxtooltip */
 .buttonHalfBorder {
@@ -340,6 +372,8 @@ font-size: x-large;
    width: 100%;
    margin-bottom: 1rem;
 }
+
+
 .skillCardImageContainer img {
     height: 100%;
     scale: 2;
@@ -383,8 +417,15 @@ margin: auto;
     height: 24rem;
     margin: auto;
 }
-.galleryCardImageContainer img{
+
+.galleryImage {
     display: flex;
+    height: 100%;
+    margin: auto;
+}
+
+.galleryCardImageContainer:hover .tooltip{
+    visibility: visible;
     height: 100%;
     margin: auto;
 }
@@ -395,6 +436,7 @@ margin: auto;
     .galleryColumn {
         width: 80%;
     }
+}
 /* xxxxxxxxxxxxxxx GALLERY xxxxxxxxxxxxx */
 
 .about {
