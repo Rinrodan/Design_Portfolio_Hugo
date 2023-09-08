@@ -76,6 +76,36 @@ body {
     width: 1.5rem;
     
 }
+/* --------------- tooltip */
+.toolTip {
+    position: absolute;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+  }
+  
+  .toolTip .toolTipContent {
+    display: none;
+    width: max-content;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 1rem;
+  
+    /* Position the tooltip */
+    position: absolute;
+    top: 100%;
+    width: 120px;
+    left:50%;
+    z-index: 99;
+    margin-left: 0;
+  }
+  
+  .tooltip:hover .toolTipContent {
+    display: block;
+  }
+
+/* xxxxxxxxxxxxxxxxxxxtooltip */
 .buttonHalfBorder {
     display:flex;
     width: 30%;
