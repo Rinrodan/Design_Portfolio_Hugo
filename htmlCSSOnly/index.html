@@ -9,16 +9,17 @@
   <link rel="icon" href="favicon.png">
   <meta name="theme-color" content="">
 </head>
-<header>
+<body></body>
+<div class="header">
     <div class="logo"><a href="#home">MB</a></div>
     <nav class="navBar" id="nav">
-        <a href="#about" class="">About</a>
-        <a href="#skills" class="">Skills</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#contact" class="">Contact</a>
+      <button onclick="document.location='#about'" class="">About</button>
+        <button onclick="document.location='#skills'" class="">Skills</button>
+        <button onclick="document.location='#gallery'">Gallery</button>
+        <button onclick="document.location='#contact'" class="">Contact</button>
     </nav>
-</header>
-<body>
+  </div>
+
   <div id="home" class="hero">
     <div class="heroTopContainer">
     <div class="heroTextContainer">
@@ -35,37 +36,61 @@
       <img src="./images/mario-portrait (2).webp"/>
     </div>
   </div>
-    <div style="margin: auto;">
-      <button onclick="document.location='#skills'" style="height: 2rem; margin: auto;">See More</button>
-        </div>
     
   </div>
   <div id="skills" class="skillsContainer">
       <div class="skillCard">
         <div class="skillCardImageContainer">
-          <img src="./images/icon-designer.svg"/>
+          <img src="./images/icon-full-stack.svg"/>
         </div>
           <p class="skillTitle">Full Stack</p>
-          <p>asdf l</p>
+          Javascript, Nextjs, MongoDB
       </div>
       <div class="skillCard">
         <div class="skillCardImageContainer">
-          <img src="./images/icon-designer.svg"/>
+          <img src="./images/icon-team.svg"/>
         </div>
-        <p class="skillTitle">Full Stack</p>
-        <p>asdf </p>
+        <p class="skillTitle">Team Oriented</p>
+        SCRUM, Agile, Public Speaker
       </div>
       <div class="skillCard">
         <div class="skillCardImageContainer">
         <img src="./images/icon-designer.svg"/>
       </div>
-        <p class="skillTitle">Full Stack</p>
-        <p>asdf lkajsdflkjasd </p>
+        <p class="skillTitle">Designer</p>
+        UI/UX, Figma, SVG
       </div>
   </div>
   <div id="gallery" class="gallery">
-    <h2>gallery</h2>
-  </div>
+    <div class="galleryColumn">
+      <div class="galleryCard">
+        <div class="galleryCardImageContainer">
+        <img src="./images/319.png"/>  </div>
+      </div>
+      <div class="galleryCard">
+        <div class="galleryCardImageContainer">
+        <img src="./images/garage1.png"/>  </div>
+      </div>
+      <div class="galleryCard">
+        <div class="galleryCardImageContainer">
+        <img src="./images/HB1.png"/>  </div>
+      </div>
+    </div>
+    <div class="galleryColumn">
+      <div class="galleryCard">
+        <div class="galleryCardImageContainer">
+        <img src="./images/spTile1.png"/>  </div>
+      </div>
+      <div class="galleryCard">
+        <div class="galleryCardImageContainer">
+        <img src="./images/spTile2.png"/>  </div>
+      </div>
+      <div class="galleryCard">
+        <div class="galleryCardImageContainer">
+        <img src="./images/spTile1.png"/>  </div>
+      </div>
+    </div>
+    </div>
   <div id="about" class="about">
     <h2>about</h2>
   </div>
