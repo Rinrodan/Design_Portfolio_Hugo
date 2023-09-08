@@ -16,7 +16,7 @@ html {
     flex-direction: column;
     align-content: center;
    width: auto;
-    
+    min-width: 380px;
   
     text-decoration: none;
     font-family: Arial, Helvetica, sans-serif;
@@ -30,7 +30,8 @@ body {
     flex-direction: column;
     margin: auto;
     width: 80%;
-
+    max-width: 1200px;
+    min-width: 380px;
     
 }
 /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
@@ -54,6 +55,17 @@ body {
 }
 .shadow-md {
     box-shadow: 1px 1px 10px rgba(255, 255, 255, 0.457);
+}
+.sectionTitle {
+    display: inline-block;
+    width: 100%;
+    margin: auto;
+    height: 3rem;
+    text-align: center;
+    vertical-align: middle;
+    padding-top: 5rem;
+    padding-bottom: 2rem;
+    font-size: xx-large;
 }
 .pill {
     display: flex;
@@ -235,6 +247,7 @@ font-size: x-large;
     margin: auto;
     margin-top: 1rem;
     text-decoration: none;
+    background-color: #ee0707;
 
 }
 
@@ -299,41 +312,18 @@ font-size: x-large;
         flex-wrap: wrap;
     }
     }
-
-/* <section class="home flex flex-col justify-between mx-auto max-w-screen-xl h-screen align-middle pt-10">
-    <div class="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16">
-      <div class="headShot flex relative h-64 overflow-hidden rounded-lg sm:h-80 lg:order-first lg:h-92" >
-        <img alt="mario" src="./mario-portrait (2).webp"
-          class=" flex absolute inset-0 h-full w-full object-cover m-auto align-middle" />
-      </div>
-      <div class="heroText flex flex-col w-full">
-        <h2 class="flex  flex-row text-3xl font-bold sm:text-4xl ">
-          Hi I'm Mario Bustillos
-        </h2>
-        <h2 class="text-3xl flex font-bold sm:text-4xl "></h2>
-        <p class="flex mt-4 text-gray-100 ">
-          I love figuring out "the Why" behind things, beginning with the end in mind, adding value and usable than ever before.
-        </p> 
-        <div class="flex buttonContainer pl-0 h-max w-2/6 ml-0 mb-0">
-          <ButtonHalfBorder buttonTitle="about" buttonURL="about" buttonIcon="./icon-person.svg"/>
-        </div>
-      </div>
-    </div>
-    <div class="flex buttonContainer h-max w-max m-auto ">
-      <ButtonHalfBorder buttonTitle="see more" buttonURL="#skills" buttonIcon="./icon-down-arrow.svg"/>
-    </div>
-  </section> 
-  <style>
-
-    .headShot {
-      box-shadow: 2px 2px 10px rgba(255, 255, 255, 0.505);
-    }
-  </style> */
 /* xxxxxxxxxxxxxxx HERO xxxxxxxxxxxxx */
 /* ----------  SKILLS ----------- */
+.skills {
+    display: flex;
+    width: 100%;
+    height: max-content;
+    margin-top: 2rem;
+    background-color: #eec707;
+}
 .skillsContainer {
     display: flex;
-    width: 70%;
+   
     border-radius: 20px;
     flex-direction: row;
     flex-wrap: wrap;
@@ -385,27 +375,26 @@ font-size: x-large;
 .gallery {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     margin:auto;
-    padding-top: 5rem;
     height: auto;
     width: 100%;
+    gap: 4rem;
+    background-color: #f0e90a;
 }
 .galleryColumn {
 display: flex;
 flex-direction: column;
-width: 50%;
+width: min-content;
 height: auto;
+gap: 4rem;
+background-color: #ee0707;
 
-gap: 1rem;
-margin: auto;
 }
 
 .galleryCard {
     display: flex;
     width: 100%;
-    height: 32rem;
-    margin: auto;
     
 }
 .galleryCardImageContainer {
@@ -416,6 +405,7 @@ margin: auto;
     border-radius: 20px;
     height: 24rem;
     margin: auto;
+    background-color: bisque;
 }
 
 .galleryImage {
@@ -430,24 +420,68 @@ margin: auto;
     margin: auto;
 }
 
-@media (max-width: 750px) {
+@media (max-width: 885px) {
     .gallery {
-        flex-direction: column;}
+        flex-direction: column;
+        justify-content: center;
+        vertical-align: middle;
+    }
     .galleryColumn {
-        width: 80%;
+        width: 100%;
+        margin: auto;
     }
 }
 /* xxxxxxxxxxxxxxx GALLERY xxxxxxxxxxxxx */
-
+/* ------------------------ ABOUT ----- */
 .about {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    margin:auto;
+    justify-content: flex-start;
     padding-top: 5rem;
-    height: 100vh;
+    height: auto;
+    background-color: gray;
 }
-
+.aboutImageContainer {
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    margin: auto;
+    height: auto;
+    min-height: 400px;
+    padding: 1rem;
+    object-fit: scale-down;
+    background-color: #eec707;
+}
+.aboutImageContainer img {
+    display: flex;
+    width: 100%;
+}
+.aboutInfoBlock {
+    display:flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    background-color: #ccc;
+}
+.aboutSkillsExpanded {
+    display:flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    min-height: 300px;
+    background-color: #db2727;
+}
+@media (max-width: 640px) {
+    .aboutImageContainer {
+        width: 100%;
+        height: auto;
+    }
+    .aboutImageContainer {
+        width: 80%;
+    }
+  
+}
+/* XXXXXXXXXXXXXXXX ABOUT XXXX */
 .contact {
     display: flex;
     flex-direction: column;

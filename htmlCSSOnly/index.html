@@ -9,176 +9,158 @@
   <link rel="icon" href="favicon.png">
   <meta name="theme-color" content="">
 </head>
-<body></body>
-<div class="header">
+<body>
+  <section class="header">
     <div class="logo"><a href="#home">MB</a></div>
     <nav class="navBar" id="nav">
       <button onclick="document.location='#about'" class="">About</button>
-        <button onclick="document.location='#skills'" class="">Skills</button>
-        <button onclick="document.location='#gallery'">Gallery</button>
-        <button onclick="document.location='#contact'" class="">Contact</button>
+      <button onclick="document.location='#skills'" class="">Skills</button>
+      <button onclick="document.location='#gallery'">Gallery</button>
+      <button onclick="document.location='#contact'" class="">Contact</button>
     </nav>
-  </div>
-
-  <div id="home" class="hero">
+  </section>
+  <!-- ======================================================== HERO -->
+  <section id="home" class="hero">
     <div class="heroTopContainer">
-    <div class="heroTextContainer">
-      <h1>Hi, my name is Mario Bustillos</h1>
-      <p>I like to build things</p>
-      <div class="skillMiniContainer">
-        <div class="pill"><img src="./images/icon-code.svg"/>Developer</div>
-        <div class="pill"><img src="./images/icon-mic.svg"/>Speaker</div>
-        <div class="pill"><img src="./images/icon-gears.svg"/>Designer</div>
+      <div class="heroTextContainer">
+        <h1>Hi, my name is Mario Bustillos</h1>
+        <p>I like to build things</p>
+        <div class="skillMiniContainer">
+          <div class="pill"><img src="./images/icon-code.svg"/>Developer</div>
+          <div class="pill"><img src="./images/icon-mic.svg"/>Speaker</div>
+          <div class="pill"><img src="./images/icon-gears.svg"/>Designer</div>
+        </div>
+      </div>
+      
+      <div class="heroImageContainer shadow-md">
+        <img src="./images/mario-portrait (2).webp"/>
       </div>
     </div>
-    
-    <div class="heroImageContainer shadow-md">
-      <img src="./images/mario-portrait (2).webp"/>
+  </section>
+  <!-- ======================================================== SKILLS -->
+  <section id="skills" class="skills">
+    <div class="skillsContainer">
+    <div class="skillCard">
+      <div class="skillCardImageContainer">
+        <img src="./images/icon-full-stack.svg"/>
+      </div>
+        <p class="skillTitle">Full Stack</p>
+        Javascript, Nextjs, MongoDB
     </div>
-  </div>
-    
-  </div>
-  <div id="skills" class="skillsContainer">
-      <div class="skillCard">
-        <div class="skillCardImageContainer">
-          <img src="./images/icon-full-stack.svg"/>
-        </div>
-          <p class="skillTitle">Full Stack</p>
-          Javascript, Nextjs, MongoDB
+    <div class="skillCard">
+      <div class="skillCardImageContainer">
+        <img src="./images/icon-team.svg"/>
       </div>
-      <div class="skillCard">
-        <div class="skillCardImageContainer">
-          <img src="./images/icon-team.svg"/>
-        </div>
-        <p class="skillTitle">Team Oriented</p>
-        SCRUM, Agile, Public Speaker
-      </div>
-      <div class="skillCard">
-        <div class="skillCardImageContainer">
+      <p class="skillTitle">Team Oriented</p>
+      SCRUM, Agile, Public Speaker
+    </div>
+    <div class="skillCard">
+      <div class="skillCardImageContainer">
         <img src="./images/icon-designer.svg"/>
       </div>
-        <p class="skillTitle">Designer</p>
-        UI/UX, Figma, SVG
-      </div>
-  </div>
-  <div id="gallery" class="gallery">
-    <div class="galleryColumn">
-      <div class="galleryCard">
-        
-        <div class="galleryCardImageContainer">
-          <label for="buttonCheck" class="buttonLabel">
-            
-          <img src="./images/319.png" class="galleryImage"/>  
-          <input type="checkbox" class="hidden" id="buttonCheck">
-                       
-                        <div class="shadow hidden"></div>
-                        <div class="hidden">
-                          <img src="./images/319.png"/>  
-                          <p>No buttons or javacript were used to make this dialog open by clicking a button-like element on the page. To close the dialog, click the button-like element below. It is not a real button, but rather another label similar to the one used to open this
-                            dialog. All of this was done using CSS and a bit of hackery with the <code>&lt;input type="checkbox"&gt;</code> element.</p><br>
-                          <label for="buttonCheck" class="buttonLabel">Close dialogue</label></div>
-
-
-          </label>
-        </div>
-      </div>
-      <div class="galleryCard">
-        <div class="galleryCardImageContainer">
-          <label for="buttonCheck" class="buttonLabel">
-          <img src="./images/garage1.png"/>  
-          <input type="checkbox" class="hidden" id="buttonCheck">
-                       
-                        <div class="shadow hidden"></div>
-                        <div class="hidden">
-                          <img src="./images/319.png"/>  
-                          <p>No buttons or javacript were used to make this dialog open by clicking a button-like element on the page. To close the dialog, click the button-like element below. It is not a real button, but rather another label similar to the one used to open this
-                            dialog. All of this was done using CSS and a bit of hackery with the <code>&lt;input type="checkbox"&gt;</code> element.</p><br>
-                          <label for="buttonCheck" class="buttonLabel">Close dialogue</label></div>
-
-
-          </label>
-        </div>
-      </div>
-      <div class="galleryCard">
-        <div class="galleryCardImageContainer">
-          <label for="buttonCheck" class="buttonLabel">
-          <img src="./images/HB1.png"/>  
-          <input type="checkbox" class="hidden" id="buttonCheck">
-                       
-                        <div class="shadow hidden"></div>
-                        <div class="hidden">
-                          <img src="./images/319.png"/>  
-                          <p>No buttons or javacript were used to make this dialog open by clicking a button-like element on the page. To close the dialog, click the button-like element below. It is not a real button, but rather another label similar to the one used to open this
-                            dialog. All of this was done using CSS and a bit of hackery with the <code>&lt;input type="checkbox"&gt;</code> element.</p><br>
-                          <label for="buttonCheck" class="buttonLabel">Close dialogue</label></div>
-
-
-          </label>
-        </div>
-      </div>
+      <p class="skillTitle">Designer</p>
+      UI/UX, Figma, SVG
     </div>
+  </div>
+  </section>
+  <!-- ======================================================== GALLERY -->
+  <h2 class="sectionTitle">Some of my work</h2>
+  <section id="gallery" class="gallery">
+      <!-- ----- column1 -->
     <div class="galleryColumn">
       <div class="galleryCard">
         <div class="galleryCardImageContainer">
           <label for="buttonCheck" class="buttonLabel">
-          <img src="./images/spTile1.png"/>  
-          <input type="checkbox" class="hidden" id="buttonCheck">
-                       
-                        <div class="shadow hidden"></div>
-                        <div class="hidden">
-                          <img src="./images/319.png"/>  
-                          <p>No buttons or javacript were used to make this dialog open by clicking a button-like element on the page. To close the dialog, click the button-like element below. It is not a real button, but rather another label similar to the one used to open this
-                            dialog. All of this was done using CSS and a bit of hackery with the <code>&lt;input type="checkbox"&gt;</code> element.</p><br>
-                          <label for="buttonCheck" class="buttonLabel">Close dialogue</label></div>
-
-
+            <img src="./images/319.png" class="galleryImage"/>  
+            <input type="checkbox" class="hidden" id="buttonCheck">
+              <div class="shadow hidden"></div>
+              <div class="hidden">
+                <img src="./images/319.png"/>  
+                <p>No buttons or javacript were used to make this dialog open by clicking a button-like element on the page. To close the dialog, click the button-like element below. It is not a real button, but rather another label similar to the one used to open this
+                  dialog. All of this was done using CSS and a bit of hackery with the <code>&lt;input type="checkbox"&gt;</code> element.</p><br>
+                <label for="buttonCheck" class="buttonLabel">Close dialogue</label>
+              </div>
           </label>
         </div>
       </div>
+
       <div class="galleryCard">
         <div class="galleryCardImageContainer">
           <label for="buttonCheck" class="buttonLabel">
-          <img src="./images/spTile2.png"/>  
-          <input type="checkbox" class="hidden" id="buttonCheck">
-                       
-                        <div class="shadow hidden"></div>
-                        <div class="hidden">
-                          <img src="./images/319.png"/>  
-                          <p>No buttons or javacript were used to make this dialog open by clicking a button-like element on the page. To close the dialog, click the button-like element below. It is not a real button, but rather another label similar to the one used to open this
-                            dialog. All of this was done using CSS and a bit of hackery with the <code>&lt;input type="checkbox"&gt;</code> element.</p><br>
-                          <label for="buttonCheck" class="buttonLabel">Close dialogue</label></div>
-
-
+            <img src="./images/319.png" class="galleryImage"/>  
+            <input type="checkbox" class="hidden" id="buttonCheck">
+              <div class="shadow hidden"></div>
+              <div class="hidden">
+                <img src="./images/319.png"/>  
+                <p>No buttons or javacript were used to make this dialog open by clicking a button-like element on the page. To close the dialog, click the button-like element below. It is not a real button, but rather another label similar to the one used to open this
+                  dialog. All of this was done using CSS and a bit of hackery with the <code>&lt;input type="checkbox"&gt;</code> element.</p><br>
+                <label for="buttonCheck" class="buttonLabel">Close dialogue</label>
+              </div>
           </label>
         </div>
       </div>
+      
+    </div>
+    <!-- xxxxxxxxxx column1 -->
+        <!-- ----- column2 -->
+    <div class="galleryColumn">
       <div class="galleryCard">
         <div class="galleryCardImageContainer">
           <label for="buttonCheck" class="buttonLabel">
-          <img src="./images/spTile1.png"/>  
-          <input type="checkbox" class="hidden" id="buttonCheck">
-                       
-                        <div class="shadow hidden"></div>
-                        <div class="hidden">
-                          <img src="./images/319.png"/>  
-                          <p>No buttons or javacript were used to make this dialog open by clicking a button-like element on the page. To close the dialog, click the button-like element below. It is not a real button, but rather another label similar to the one used to open this
-                            dialog. All of this was done using CSS and a bit of hackery with the <code>&lt;input type="checkbox"&gt;</code> element.</p><br>
-                          <label for="buttonCheck" class="buttonLabel">Close dialogue</label></div>
-
-
+            <img src="./images/319.png" class="galleryImage"/>  
+            <input type="checkbox" class="hidden" id="buttonCheck">
+              <div class="shadow hidden"></div>
+              <div class="hidden">
+                <img src="./images/319.png"/>  
+                <p>No buttons or javacript were used to make this dialog open by clicking a button-like element on the page. To close the dialog, click the button-like element below. It is not a real button, but rather another label similar to the one used to open this
+                  dialog. All of this was done using CSS and a bit of hackery with the <code>&lt;input type="checkbox"&gt;</code> element.</p><br>
+                <label for="buttonCheck" class="buttonLabel">Close dialogue</label>
+              </div>
           </label>
         </div>
       </div>
+                      
+      <div class="galleryCard">
+        <div class="galleryCardImageContainer">
+          <label for="buttonCheck" class="buttonLabel">
+            <img src="./images/319.png" class="galleryImage"/>  
+            <input type="checkbox" class="hidden" id="buttonCheck">
+              <div class="shadow hidden"></div>
+              <div class="hidden">
+                <img src="./images/319.png"/>  
+                <p>No buttons or javacript were used to make this dialog open by clicking a button-like element on the page. To close the dialog, click the button-like element below. It is not a real button, but rather another label similar to the one used to open this
+                  dialog. All of this was done using CSS and a bit of hackery with the <code>&lt;input type="checkbox"&gt;</code> element.</p><br>
+                <label for="buttonCheck" class="buttonLabel">Close dialogue</label>
+              </div>
+          </label>
+        </div>
+      </div>
+<!-- xxxxxcolumn2 -->
     </div>
+    
+  </section>
+        <!-- ======================================================== ABOUT -->
+  <h2 class="sectionTitle">about</h2>
+  <section id="about" class="about">
+    <div class="aboutImageContainer">
+      <img src="./images/mario-portrait.webp"/>
     </div>
-  <div id="about" class="about">
-    <h2>about</h2>
-  </div>
+    <div class="aboutInfoBlock">
+      info block
+    </div>
+    <div class="aboutInfoBlock">
+      info block
+    </div>
+    <div class="aboutSkillsExpanded">
+      skills expanded
+    </div>
+  </section>
 </body>
 <footer>
-    <div id="contact" class="contact"> 
-      <h2>contact</h2>
-    </div>
+  <h2 class="sectionTitle">contact</h2>
+  <div id="contact" class="contact"> 
+    
+  </div>
 </footer>
 <div style="visibility: hidden;">
   Copyright (c) 2023 by Angelos Chalaris (https://codepen.io/chalarangelo/pen/xOeqOq)
