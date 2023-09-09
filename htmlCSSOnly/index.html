@@ -13,10 +13,32 @@
   <section class="header">
     <div class="logo"><a href="#home">MB</a></div>
     <nav class="navBar" id="nav">
-      <button onclick="document.location='#about'" class="">About</button>
-      <button onclick="document.location='#skills'" class="">Skills</button>
-      <button onclick="document.location='#gallery'">Gallery</button>
-      <button onclick="document.location='#contact'" class="">Contact</button>
+      <div class="navButtons">
+        <button onclick="document.location='#about'" class="navButton">About</button>
+        <button onclick="document.location='#skills'" class="navButton">Skills</button>
+        <button onclick="document.location='#gallery'" class="navButton">Gallery</button>
+        <button onclick="document.location='#contact'" class="navButton">Contact</button>
+      </div>
+      <ul id="menu">
+        <li>
+          <a href="#"><img src="./images/icon-hamburger.svg" height="40px"/></a>
+          <ul>
+            <li>
+              <a href="#galleryTitle">Work</a>
+            </li>
+            <li>
+              <a href="#aboutTitle">About</a>
+            </li>
+            <li>
+              <a href="#contact">Contact</a>
+            </li>
+          </ul>					
+            
+      </ul>
+
+
+
+
     </nav>
   </section>
   <!-- ======================================================== HERO -->
@@ -64,39 +86,27 @@
   </div>
   </section>
   <!-- ======================================================== GALLERY -->
-  <h2 class="sectionTitle">Some of my work</h2>
+  <h2 class="sectionTitle" id="galleryTitle">Some of my work</h2>
   <section id="gallery" class="gallery">
       <!-- ----- column1 -->
     <div class="galleryColumn">
       <div class="galleryCard">
-        <div class="galleryCardImageContainer">
-          <label for="buttonCheck" class="buttonLabel">
-            <img src="./images/319.png" class="galleryImage"/>  
-            <input type="checkbox" class="hidden" id="buttonCheck">
-              <div class="shadow hidden"></div>
-              <div class="hidden">
-                <img src="./images/319.png"/>  
-                <p>No buttons or javacript were used to make this dialog open by clicking a button-like element on the page. To close the dialog, click the button-like element below. It is not a real button, but rather another label similar to the one used to open this
-                  dialog. All of this was done using CSS and a bit of hackery with the <code>&lt;input type="checkbox"&gt;</code> element.</p><br>
-                <label for="buttonCheck" class="buttonLabel">Close dialogue</label>
-              </div>
-          </label>
+        <div class="galleryCard">
+          <div class="galleryCardImageContainer">
+            <label class="buttonLabel" for="modal-2">
+              <img src="./images/spTile1.png" alt=""  width="500px" height="500px" class="galleryImage"/>
+            </label>
+          </div>
         </div>
       </div>
 
       <div class="galleryCard">
-        <div class="galleryCardImageContainer">
-          <label for="buttonCheck" class="buttonLabel">
-            <img src="./images/319.png" class="galleryImage"/>  
-            <input type="checkbox" class="hidden" id="buttonCheck">
-              <div class="shadow hidden"></div>
-              <div class="hidden">
-                <img src="./images/319.png"/>  
-                <p>No buttons or javacript were used to make this dialog open by clicking a button-like element on the page. To close the dialog, click the button-like element below. It is not a real button, but rather another label similar to the one used to open this
-                  dialog. All of this was done using CSS and a bit of hackery with the <code>&lt;input type="checkbox"&gt;</code> element.</p><br>
-                <label for="buttonCheck" class="buttonLabel">Close dialogue</label>
-              </div>
-          </label>
+        <div class="galleryCard">
+          <div class="galleryCardImageContainer">
+            <label class="buttonLabel" for="modal-2">
+              <img src="./images/garage1.png" alt=""  width="500px" height="500px" class="galleryImage"/>
+            </label>
+          </div>
         </div>
       </div>
       
@@ -105,33 +115,19 @@
         <!-- ----- column2 -->
     <div class="galleryColumn">
       <div class="galleryCard">
-        <div class="galleryCardImageContainer">
-          <label for="buttonCheck" class="buttonLabel">
-            <img src="./images/319.png" class="galleryImage"/>  
-            <input type="checkbox" class="hidden" id="buttonCheck">
-              <div class="shadow hidden"></div>
-              <div class="hidden">
-                <img src="./images/319.png"/>  
-                <p>No buttons or javacript were used to make this dialog open by clicking a button-like element on the page. To close the dialog, click the button-like element below. It is not a real button, but rather another label similar to the one used to open this
-                  dialog. All of this was done using CSS and a bit of hackery with the <code>&lt;input type="checkbox"&gt;</code> element.</p><br>
-                <label for="buttonCheck" class="buttonLabel">Close dialogue</label>
-              </div>
-          </label>
+        <div class="galleryCard">
+          <div class="galleryCardImageContainer">
+            <label class="buttonLabel" for="modal-2">
+              <img src="./images/HB2.png" alt=""  width="500px" height="500px" class="galleryImage"/>
+            </label>
+          </div>
         </div>
       </div>
                       
       <div class="galleryCard">
         <div class="galleryCardImageContainer">
-          <label for="buttonCheck" class="buttonLabel">
-            <img src="./images/319.png" class="galleryImage"/>  
-            <input type="checkbox" class="hidden" id="buttonCheck">
-              <div class="shadow hidden"></div>
-              <div class="hidden">
-                <img src="./images/319.png"/>  
-                <p>No buttons or javacript were used to make this dialog open by clicking a button-like element on the page. To close the dialog, click the button-like element below. It is not a real button, but rather another label similar to the one used to open this
-                  dialog. All of this was done using CSS and a bit of hackery with the <code>&lt;input type="checkbox"&gt;</code> element.</p><br>
-                <label for="buttonCheck" class="buttonLabel">Close dialogue</label>
-              </div>
+          <label class="buttonLabel" for="modal-2">
+            <img src="./images/react.png" alt=""  width="500px" height="500px" class="galleryImage"/>
           </label>
         </div>
       </div>
@@ -140,10 +136,10 @@
     
   </section>
         <!-- ======================================================== ABOUT -->
-  <h2 class="sectionTitle">about</h2>
+  <h2 class="sectionTitle" id="aboutTitle">about</h2>
   <section id="about" class="about">
     <div class="aboutImageContainer">
-      <img src="./images/mario-portrait.webp"/>
+      <img src="./images/mario-portrait.webp" width="300px" height="500px"/>
     </div>
     <div class="aboutInfoBlock">
       info block
@@ -154,7 +150,80 @@
     <div class="aboutSkillsExpanded">
       skills expanded
     </div>
+
+   
+
+
   </section>
+  
+ 
+ <label class="modal">
+    <input type="checkbox">
+      Click Me
+      <span>
+        <div style="width: 300px; background-color: yellow;">
+        <img src="./images/icon-code.svg" width="300px" height="500px"/>
+        <img src="./images/HB1.png" width="300px" height="500px"/>
+          adsfklj
+        </div>
+      </span>
+    </input>
+</label>
+
+<h1>Pure CSS modal box</h1>
+<div>
+  <p>You can place trigger button wherever you want.</p>
+  <p>
+    <label class="btn" for="modal-1">Show me modal with a cat</label>
+    <label class="btn btn--blue" for="modal-2">Click for more AWW</label>
+  </p>
+</div>
+
+<div>
+  <p>You can place trigger button wherever you want.</p>
+  <p>
+    <label class="btn" for="modal-1">Show me modal with a cat</label>
+    <label class="btn btn--blue" for="modal-2">
+      <img src="./images/319.png" alt=""  width="200px" height="500px"/>
+    </label>
+  </p>
+</div>
+
+
+<input class="modal-state" id="modal-1" type="checkbox" />
+<div class="modal">
+  <label class="modal__bg" for="modal-1"></label>
+  <div class="modal__inner">
+    <label class="modal__close" for="modal-1"></label>
+    <h2>Caaaats FTW!</h2>
+    <p><img src="./images/319.png" alt=""  width="500px" height="500px"/>Aliquam in sagittis nulla. Curabitur euismod diam eget risus venenatis, sed dictum lectus bibendum. Nunc nunc nisi, hendrerit eget nisi id, rhoncus rutrum velit. Nunc vel mauris dolor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam fringilla quis nisi eget imperdiet.</p>
+  </div>
+</div>
+
+<input class="modal-state" id="modal-2" type="checkbox" />
+<div class="modal">
+  <label class="modal__bg" for="modal-2"></label>
+  <div class="modal__inner">
+    <label class="modal__close" for="modal-2"></label>
+    <h2>Sleppy sloth</h2>
+    <p><img src="./images/mario-portrait.webp" alt=""  width="500px" height="500px"/>Aliquam in sagittis nulla. Curabitur euismod diam eget risus venenatis, sed dictum lectus bibendum. Nunc nunc nisi, hendrerit eget nisi id, rhoncus rutrum velit. Nunc vel mauris dolor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam fringilla quis nisi eget imperdiet.</p>
+  </div>
+</div>
+ 
+
+  <div class="modalContent">
+  
+    <div class="modalImageContainer">
+      
+    </div>
+    <div class="modalTitle">
+
+    </div>
+    <div class="modalText">
+
+    </div>
+    <div class="modalShadow"></div>
+  </div>
 </body>
 <footer>
   <h2 class="sectionTitle">contact</h2>
