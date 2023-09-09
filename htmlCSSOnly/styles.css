@@ -275,8 +275,8 @@ font-size: x-large;
   }
   .modal img {
     z-index: 100;
-    width: 24rem;
-    height: 24rem;
+    width: auto;
+    height: 100%;
 }
   .modal__bg {
     position: absolute;
@@ -303,17 +303,21 @@ font-size: x-large;
   .modal__inner {
     transition: top .25s ease;
     position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
     top: -20%;
     right: 0;
     bottom: 0;
     left: 0;
-    width: 50%;
+    width: 75%;
+    max-width: 800px;
     margin: auto;
     overflow: auto;
     background: #fff;
     border-radius: 5px;
     padding: 1em 2em;
-    height: 50%;
+    height: 75%;
   }
   
   .modal__close {
@@ -348,23 +352,59 @@ font-size: x-large;
     transform: rotate(-45deg);
   }
   
-  @media screen and (max-width: 768px) {
-      
-    .modal__inner {
-      width: 90%;
-      height: 90%;
-      box-sizing: border-box;
-    }
-  }
 
+.modal__imageContainer {
+    display: flex;
+    flex-direction: row;
+    vertical-align: middle;
+    width: 30%;
+    height: 20rem;
+    margin-left: 0;
+}
+.modal__textContainer {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    height: max-content;
+    margin: auto;
+    margin-right: 0;
+    
+}
 
-  
-  p img {
+.modal__miniGallery {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width:20%;
+    height:  10rem;
+    margin: auto;
+    margin-top: 0;
+    object-fit: scale-down;
+    padding-left: 20%;
+    padding-right: 20%;
+}
+.modal__miniGallery  img{
+    display: flex;
     width: 100%;
-    height: auto;
-    float: left;
-    margin: 0 1em 1em 0;
-  }
+    height: min-content;
+    object-fit: scale-down;
+    margin-left: 0;
+    margin: auto;
+}
+@media (max-width: 750px) {
+    .modal__textContainer {
+        width: 100%;
+    }
+    .modal__inner {
+        width: 90%;
+        height: 90%;
+        box-sizing: border-box;
+    }
+    .modal__imageContainer {
+        margin: auto;
+    }
+}
+
 /* inspired by https://codepen.io/Idered/pen/DdeoeW */
 /* xxxxxxxxx UTILITIES xxxxxxxxxxxxxxxxx */
 /* ----------  NAVBAR ----------- */
@@ -753,11 +793,11 @@ font-size: x-large;
     margin-bottom: 0.1rem;
 }
 .skillCardImageContainer {
-   display: flex;
-   flex-direction: row;
-   height: 2rem;
-   width: 100%;
-   margin-bottom: 1rem;
+    display: flex;
+    flex-direction: row;
+    height: 2rem;
+    width: 100%;
+    margin-bottom: 1rem;
 }
 
 
@@ -777,7 +817,6 @@ font-size: x-large;
     height: auto;
     width: 100%;
     gap: 4rem;
-
 }
 .galleryColumn {
 display: flex;
@@ -785,8 +824,6 @@ flex-direction: column;
 width: min-content;
 height: auto;
 gap: 4rem;
-
-
 }
 
 .galleryCard {
@@ -794,7 +831,9 @@ gap: 4rem;
     width: 100%;
     transition-timing-function: ease-in-out;
     transition-duration: 300ms;
-    
+    :hover {
+        scale: 1.1;
+    }
 }
 .galleryCardImageContainer {
     display: flex;
@@ -802,24 +841,22 @@ gap: 4rem;
     justify-content: center;
     overflow: hidden;
     border-radius: 20px;
-    height: 24rem;
+    height: 22rem;
+    width: 22rem;
     margin: auto;
-    
+    box-shadow: 5px 5px 10px black;
     transition-timing-function: ease-in-out;
     transition-duration: 300ms;
-    :hover {
-        scale: 1.1;
-    }
 }
 
 .galleryImage {
     display: flex;
     height: 100%;
-    width: min-content;
+    width: auto;
     margin: auto;
+    scale: 1.2;
     transition-timing-function: ease-in-out;
     transition-duration: 300ms;
-    
 }
 
 .galleryCardImageContainer:hover .tooltip{
