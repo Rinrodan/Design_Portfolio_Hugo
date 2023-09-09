@@ -15,6 +15,7 @@
     <nav class="navBar" id="nav">
       <div class="navButtons">
         <button onclick="document.location='#about'" class="navButton">About</button>
+        <a href="#about"><div class="pillLarge">dsfgklj</div></a>
         <button onclick="document.location='#skills'" class="navButton">Skills</button>
         <button onclick="document.location='#gallery'" class="navButton">Gallery</button>
         <button onclick="document.location='#contact'" class="navButton">Contact</button>
@@ -64,21 +65,21 @@
     <div class="skillsContainer">
     <div class="skillCard">
       <div class="skillCardImageContainer">
-        <img src="./images/icon-full-stack.svg"/>
+        <img src="./images/icon-full-stack-white.svg"/>
       </div>
         <p class="skillTitle">Full Stack</p>
         Javascript, Nextjs, MongoDB
     </div>
     <div class="skillCard">
       <div class="skillCardImageContainer">
-        <img src="./images/icon-team.svg"/>
+        <img src="./images/icon-team-white.svg"/>
       </div>
-      <p class="skillTitle">Team Oriented</p>
+      <p class="skillTitle">Teams Focused</p>
       SCRUM, Agile, Public Speaker
     </div>
     <div class="skillCard">
       <div class="skillCardImageContainer">
-        <img src="./images/icon-designer.svg"/>
+        <img src="./images/icon-designer-white.svg"/>
       </div>
       <p class="skillTitle">Designer</p>
       UI/UX, Figma, SVG
@@ -150,45 +151,9 @@
     <div class="aboutSkillsExpanded">
       skills expanded
     </div>
-
-   
-
-
   </section>
   
- 
- <label class="modal">
-    <input type="checkbox">
-      Click Me
-      <span>
-        <div style="width: 300px; background-color: yellow;">
-        <img src="./images/icon-code.svg" width="300px" height="500px"/>
-        <img src="./images/HB1.png" width="300px" height="500px"/>
-          adsfklj
-        </div>
-      </span>
-    </input>
-</label>
-
-<h1>Pure CSS modal box</h1>
-<div>
-  <p>You can place trigger button wherever you want.</p>
-  <p>
-    <label class="btn" for="modal-1">Show me modal with a cat</label>
-    <label class="btn btn--blue" for="modal-2">Click for more AWW</label>
-  </p>
-</div>
-
-<div>
-  <p>You can place trigger button wherever you want.</p>
-  <p>
-    <label class="btn" for="modal-1">Show me modal with a cat</label>
-    <label class="btn btn--blue" for="modal-2">
-      <img src="./images/319.png" alt=""  width="200px" height="500px"/>
-    </label>
-  </p>
-</div>
-
+  <!-- ============================================= MODAL CONTENT ========== -->
 
 <input class="modal-state" id="modal-1" type="checkbox" />
 <div class="modal">
@@ -196,7 +161,7 @@
   <div class="modal__inner">
     <label class="modal__close" for="modal-1"></label>
     <div class="modal__imageContainer">
-      <img src="./images/CAD-table.webp" alt=""  width="500px" height="300px"/>
+      <img src="./images/CAD-table.webp" alt=""  width="300px" height="300px"/>
     </div>
     <div class="modal__textContainer">
       <h2>Blog Logo/Icon</h2>
@@ -268,7 +233,7 @@
 </div>
 
 
-  <div class="modalContent">
+  <!-- <div class="modalContent">
   
     <div class="modalImageContainer">
       
@@ -280,12 +245,21 @@
 
     </div>
     <div class="modalShadow"></div>
-  </div>
+  </div> -->
+  <!-- xxxxxxxxxxxxxxxxxxxxxxxxx modal Content xxxxxxxxxxxxxxxxxxxxxxxx -->
 </body>
 <footer>
   <h2 class="sectionTitle">contact</h2>
   <div id="contact" class="contact"> 
-    
+    <div class="contactContainer">
+      <div class="iconsContainer" >
+        <a href="mailto: mario@mariobustillos.com"><img src="./images/icon-email-white.svg" class="contactIcon pillButton"  alt=""  width="200px" height="200px"/></a>
+        <a href="https://www.linkedin.com/in/mario-bustillos-355226287/"><img src="./images/icon-linkedin-white.svg" class="contactIcon pillButton" alt=""  width="200px" height="200px"/></a>
+      </div>
+    </div>
+  </div>
+  <div class="copyright">
+    Copyright (c) 2023 Mario Bustillos
   </div>
 </footer>
 <div style="visibility: hidden;">
