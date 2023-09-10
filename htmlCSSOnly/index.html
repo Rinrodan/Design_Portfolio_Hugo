@@ -119,17 +119,19 @@
         <div class="galleryCard">
           <div class="galleryCardImageContainer">
             <label class="buttonLabel" for="modal-3">
-              <img src="./images/sptilesvg.svg" alt=""  width="500px" height="500px" class="galleryImage"/>
+              <img src="./images/sptilesvg-square.svg" alt=""  width="500px" height="500px" class="galleryImage"/>
             </label>
           </div>
         </div>
       </div>
                       
       <div class="galleryCard">
-        <div class="galleryCardImageContainer">
-          <label class="buttonLabel" for="modal-4">
-            <img src="./images/319.png" alt=""  width="800px" height="800px" class="galleryImage"/>
-          </label>
+        <div class="galleryCard">
+          <div class="galleryCardImageContainer">
+            <label class="buttonLabel" for="modal-4">
+              <img src="./images/319.png" alt=""  width="500px" height="500px" class="galleryImage"/>
+            </label>
+          </div>
         </div>
       </div>
 <!-- xxxxxcolumn2 -->
@@ -143,13 +145,39 @@
       <img src="./images/mario-portrait.webp" width="300px" height="500px"/>
     </div>
     <div class="aboutInfoBlock">
-      info block
+      <h2 class="section-title">Background</h2>
+      <p>
+        I am a life long learner who likes to make things and find outside the box solutions to tough problems. 
+      </p>
     </div>
     <div class="aboutInfoBlock">
-      info block
+      <h2 class="section-title">Education</h2>
+      <p>University of Louisville B.A. Communications (2025)</p>
+					<p>Galvanize Full Stack Bootcamp</p>
+					<p>Udemy: Design, Marketing, SEO</p>
     </div>
     <div class="aboutSkillsExpanded">
-      skills expanded
+      <h2 class="section-title">Skills</h2>
+      
+      <p class="skillBullet">Design</p>
+      <div class="aboutSkillPillInline">
+        <div class="pill">UI/UX</div>
+        <div class="pill">CAD (Solidworks)</div>
+        <div class="pill">Vector Art (Logos/Icons)</div>
+      </div>
+
+      <p class="section-title">Front-End Web Dev</p>
+      <div class="aboutSkillPillInline">
+        <div class="pill">Javascript</div>
+        <div class="pill">Vanilla CSS</div>
+        <div class="pill">Next.js</div>
+      </div>
+      <p class="skillBullet">Back-End Web Dev</p>
+      <div class="aboutSkillPillInline">
+        <div class="pill">MongoDB</div>
+        <div class="pill">GraphQL</div>
+        <div class="pill">PostgresQL</div>
+      </div>
     </div>
   </section>
   
@@ -189,8 +217,6 @@
     <div class="modal__miniGallery">
       <img src="./images/HB1.png" alt=""  width="500px" height="500px"/>
       <img src="./images/HB3.svg" alt=""  width="500px" height="500px"/>
-      <img src="./images/HB3.svg" alt=""  width="500px" height="500px"/>
-      <img src="./images/HB1.png" alt=""  width="500px" height="500px"/>
     </div>
   </div>
 </div>
@@ -201,7 +227,26 @@
   <div class="modal__inner">
     <label class="modal__close" for="modal-3"></label>
     <div class="modal__imageContainer">
-      <img src="./images/sptilesvg.svg" alt=""  width="500px" height="300px"/>
+      <img src="./images/sptilesvg-square.svg" alt=""  width="500px" height="300px"/>
+    </div>
+    <div class="modal__textContainer">
+      <h2>Blog Logo/Icon</h2>
+      <p>Aliquam in sagittis nulla. Curabitur euismod diam eget risus venenatis, sed dictum lectus bibendum. Nunc nunc nisi, hendrerit eget nisi id, rhoncus rutrum velit. Nunc vel mauris dolor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam fringilla quis nisi eget imperdiet.</p>
+    </div>
+    <div class="modal__miniGallery">
+      <img src="./images/spTile2.png" alt=""  width="500px" height="500px"/>
+      <img src="./images/spTile3.png" alt=""  width="500px" height="500px"/>
+    </div>
+  </div>
+</div>
+
+<input class="modal-state" id="modal-4" type="checkbox" />
+<div class="modal">
+  <label class="modal__bg" for="modal-4"></label>
+  <div class="modal__inner">
+    <label class="modal__close" for="modal-4"></label>
+    <div class="modal__imageContainer">
+      <img src="./images/319.png" alt=""  width="500px" height="300px"/>
     </div>
     <div class="modal__textContainer">
       <h2>Blog Logo/Icon</h2>
@@ -211,24 +256,6 @@
       <img src="./images/garage1.png" alt=""  width="500px" height="500px"/>
       <img src="./images/garage2.png" alt=""  width="500px" height="500px"/>
     </div>
-  </div>
-</div>
-
-<input class="modal-state" id="modal-4" type="checkbox" />
-<div class="modal">
-  <label class="modal__bg" for="modal-4"></label>
-  <div class="modal__imageContainer">
-    <img src="./images/HB2.png" alt=""  width="500px" height="500px"/>
-  </div>
-  <div class="modal__textContainer">
-    <h2>Blog Logo/Icon</h2>
-    <p>Aliquam in sagittis nulla. Curabitur euismod diam eget risus venenatis, sed dictum lectus bibendum. Nunc nunc nisi, hendrerit eget nisi id, rhoncus rutrum velit. Nunc vel mauris dolor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam fringilla quis nisi eget imperdiet.</p>
-  </div>
-  <div class="modal__miniGallery">
-    <img src="./images/HB1.png" alt=""  width="500px" height="500px"/>
-    <img src="./images/HB3.svg" alt=""  width="500px" height="500px"/>
-    <img src="./images/HB3.svg" alt=""  width="500px" height="500px"/>
-    <img src="./images/HB1.png" alt=""  width="500px" height="500px"/>
   </div>
 </div>
 
