@@ -9,7 +9,11 @@
     --font-light-color: rgb(255, 255, 255);
     --font-dark-color: rgb(1, 56, 22);
     --text-md: 1.2rem; font-weight: bold;
-    --screen: max-width;
+    --max-width: 800px;
+    --media-sm: 640px;
+    --media-md: 740px;
+    --media-lg: 850px;
+
     
 }
 /* ooooooooooo UTILITIES oooooooooooooooo */
@@ -32,12 +36,12 @@ body {
     flex-direction: column;
     margin: auto;
     width: 80%;
-    max-width: 1200px;
+    max-width: var(--max-width);
     min-width: 380px;
     
 }
-/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 700px) {
+
+@media screen and (max-width:var(--media-sm)) {
     .row, .navbar {   
         flex-direction: column;
         }
@@ -58,6 +62,7 @@ body {
 .shadow-md {
     box-shadow: 1px 1px 10px rgba(255, 255, 255, 0.457);
 }
+
 .sectionTitle {
     display: inline-block;
     width: 100%;
@@ -73,6 +78,7 @@ body {
     display: flex;
     flex-direction: row;
     padding: .5rem 1rem;
+    width: fit-content;
     gap: 0.5rem;
     color: var(--font-light-color);
     margin-top: 0,5%;
@@ -139,6 +145,9 @@ body {
   .modal-state:checked + .modal {
     opacity: 1;
     visibility: visible;
+    & .navBar {
+        visibility: hidden;
+    }
   }
   
   .modal-state:checked + .modal .modal__inner {
@@ -156,7 +165,7 @@ body {
     bottom: 0;
     left: 0;
     width: 75%;
-    max-width: 800px;
+    max-width: var(--max-width);
     margin: auto;
     overflow: auto;
     background: #fff;
@@ -243,11 +252,11 @@ body {
     transition-timing-function: ease-in-out;
     transition-duration: 300ms;
     &:hover {
-        scale: 3;
+        scale: 2.8;
         z-index: 1000;transform: translate(0, -25%);
     }
 }
-@media (max-width: 750px) {
+@media (max-width:var(--media-md)) {
     .modal__textContainer {
         width: 100%;
     }
@@ -285,18 +294,34 @@ body {
     display: flex;
     flex-direction: row;
     vertical-align: middle;
+    justify-content: center;
+    width: 98%;
+    height: auto;
+}
+.innerHeader {
+    display: flex;
+    flex-direction: row;
+    vertical-align: middle;
     justify-content: space-between;
-    position: sticky;
     border: 2px solid black;
-    width:auto;  
+    width:80%;
+    margin: auto;  
+    max-width: var(--max-width);
     background-color:var(--secondary-color);
     padding:1rem;
+    z-index: 1001;
 }
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 80%;
+}
+
 .navBar {
     display: flex;
     flex-direction: row;
     margin-right: 0px;
-    width: auto;
+    width: 100%;
     height: max-content;
     text-decoration: none;
 }
@@ -338,13 +363,21 @@ body {
 }
 
 /* Main menu */
+.hamburger {
+    visibility: visible;
+    display: flex;
+    list-style: none;
+    width: max-content;
+    margin: auto;
 
+}
 #menu
 {
     visibility: visible;
 	width: 100%;
-	margin: 0;
-	padding: 10px 0 0 0;
+	margin: auto;
+    margin-right: 0;
+	padding: 0px 0 0 0;
 	list-style: none;  
 }
 @media screen and (min-width: 640px) {
@@ -539,12 +572,24 @@ body {
     margin-left: 0;
     width: 10rem;
 }
-@media (max-width: 750px) {
-    .navBar {
+@media (max-width:var(--media-md)) {
+    .navButtons {
         gap: 0.5rem;
 
     padding: .5rem 1rem
-    }}
+    }
+}
+
+@media (min-width: 750px) {
+    .header {
+        top: 0;
+        width: 80%;
+        max-width: var(--max-width);
+        margin: auto;
+    }
+
+}
+
 
 
 /* xxxxxxxxxxxxxxx NAVBAR xxxxxxxxxxxxx */
@@ -553,10 +598,10 @@ body {
     display: flex;
     flex-direction: column;
     width: 100%;
-    max-width: 800px;
+    max-width: var(--max-width);
     height: 50%;
     margin: auto;
-    margin-top: 1rem;
+    margin-top: 4rem;
     text-decoration: none;
 }
 .heroTopContainer {
@@ -565,6 +610,7 @@ body {
     width: 100%;
     height: 32rem;
     margin: auto;
+    
 }
 .heroTextContainer {
     display: flex;
@@ -590,17 +636,27 @@ body {
 }
 .skillMiniContainer {
     display: none;
-    flex-direction: row;
-    flex-wrap: wrap-reverse;
+    flex-direction: column;
     justify-content: space-around;
     text-shadow: 1px 1px 1px black;
+    & #skillPillOne {
+        margin: auto;
+        margin-left: 0;
+    }
+    & #skillPillTwo {
+        margin: auto;
+    }
+    & #skillPillThree {
+        margin: auto;
+        margin-right: 0;
+    }
 }
 @media (min-width: 750px) {
     .skillMiniContainer{
         display: flex;
     }
     }
-@media (max-width: 750px) {
+@media (max-width:var(--media-md)) {
     .hero {
         flex-direction: column;}
     .heroImageContainer {
@@ -620,6 +676,7 @@ body {
 .skills {
     display: flex;
     width: 100%;
+    max-width: var(--max-width)
     height: max-content;
     margin-top: 2rem;
     color: var(--font-light-color);
@@ -628,7 +685,6 @@ body {
 }
 .skillsContainer {
     display: flex;
-   
     border-radius: 20px;
     flex-direction: row;
     flex-wrap: wrap;
@@ -637,6 +693,7 @@ body {
     margin-top: 2rem;
     padding: 1rem;
     height: max-content;
+    width: 80%;
     border: 2px solid rgba(0, 128, 0, 0.456);
     background-color:  rgb(44, 83, 44);
   
@@ -724,7 +781,7 @@ body {
     transition-duration: 300ms;
 }
 
-@media (max-width: 885px) {
+@media (max-width:var(--media-lg)) {
     .gallery {
         flex-direction: column;
         justify-content: center;
@@ -796,7 +853,7 @@ width: 30%;
     justify-content: flex-start;
     width: 12rem;
 }
-@media (max-width: 640px) {
+@media (max-width:var(--media-sm)) {
     .aboutImageContainer {
         width: 100%;
         height: auto;
@@ -809,7 +866,7 @@ width: 30%;
     .about {
         margin: auto;
         width: 60%;
-        max-width: 800px;
+        max-width: var(--max-width);
     }
     .aboutInfoBlock {
         width: 100;
@@ -832,7 +889,7 @@ width: 30%;
     justify-content: center;
     height: 50%;
     width: 80%;
-    max-width: 800px;
+    max-width: var(--max-width);
     margin: auto;
 }
 .iconsContainer {

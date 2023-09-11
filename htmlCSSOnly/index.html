@@ -11,6 +11,7 @@
 </head>
 <body>
   <section class="header">
+    <div class="innerHeader  sticky">
     <div class="logo"><a href="#home">MB</a></div>
     <nav class="navBar" id="nav">
       <div class="navButtons">
@@ -20,38 +21,34 @@
         <button onclick="document.location='#gallery'" class="navButton">Gallery</button>
         <button onclick="document.location='#contact'" class="navButton">Contact</button>
       </div>
-      <ul id="menu">
-        <li>
-          <a href="#"><img src="./images/icon-hamburger.svg" height="40px"/></a>
-          <ul>
-            <li>
-              <a href="#galleryTitle">Work</a>
-            </li>
-            <li>
-              <a href="#aboutTitle">About</a>
-            </li>
-            <li>
-              <a href="#contact">Contact</a>
-            </li>
-          </ul>					
-            
-      </ul>
-
+      <div class="hamburger">
+        <ul id="menu">
+          <li>
+            <a href="#"><img src="./images/icon-hamburger.svg" height="40px"/></a>
+            <ul>
+              <li><a href="#galleryTitle">Work</a></li>
+              <li><a href="#aboutTitle">About</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>		
+          </li>
+        </ul>
+      </div>
 
 
 
     </nav>
+  </div>
   </section>
   <!-- ======================================================== HERO -->
   <section id="home" class="hero">
     <div class="heroTopContainer">
       <div class="heroTextContainer">
         <h1>Hi, my name is Mario Bustillos</h1>
-        <p>I like to build things</p>
+        <p>I like to make things</p>
         <div class="skillMiniContainer">
-          <div class="pill"><img src="./images/icon-code.svg"/>Developer</div>
-          <div class="pill"><img src="./images/icon-mic.svg"/>Speaker</div>
-          <div class="pill"><img src="./images/icon-gears.svg"/>Designer</div>
+          <div class="pill" id="skillPillOne"><img src="./images/icon-code.svg"/>Developer</div>
+          <div class="pill" id="skillPillTwo"><img src="./images/icon-mic.svg"/>Communicator</div>
+          <div class="pill" id="skillPillThree"><img src="./images/icon-gears.svg"/>Designer</div>
         </div>
       </div>
       
@@ -75,7 +72,7 @@
         <img src="./images/icon-team-white.svg"/>
       </div>
       <p class="skillTitle">Teams Focused</p>
-      SCRUM, Agile, Public Speaker
+      SCRUM, Agile, Communications
     </div>
     <div class="skillCard">
       <div class="skillCardImageContainer">
@@ -137,14 +134,14 @@
       <img src="./images/mario-portrait.webp" width="300px" height="500px"/>
     </div>
     <div class="aboutInfoBlock">
-      <p> Hi there! I’m a life-long learner who loves making things and solving hard problems. I’m passionate about intuitive design and enjoy figuring out the best design for my clients. 
-      <p>As a programmer, I’m a team player and communicator with experience working in Agile and SCRUM environments. I also have a background in design, specifically vector art using Illustrator and Inkscape. 
+      <p> Hi there! I'm a life-long learner who loves making things and solving hard problems. I'm passionate about intuitive design and enjoy figuring out the best design for my clients. 
+      <p>As a programmer, I'm a team player and communicator with experience working in Agile and SCRUM environments. I also have a background in design, specifically vector art using Illustrator and Inkscape. 
       </p>
-      <p>I’m currently working on my Bachelor of Arts in Communication at the University of Louisville, which has given me a strong foundation in effective communication strategies. 
+      <p>I'm currently working on my Bachelor of Arts in Communication at the University of Louisville, which has given me a strong foundation in effective communication strategies. 
       </p>
-      <p>In addition to my education, I’ve completed the Galvanize Full Stack web development Bootcamp as well as courses on Design, Marketing, and SEO from Udemy. 
+      <p>In addition to my education, I've completed the Galvanize Full Stack web development Bootcamp as well as courses on Design, Marketing, and SEO from Udemy. 
       </p>
-      <p>My design skills include UI/UX design for creating user experiences that are intuitive and tailored to the user’s needs. I also have experience with CAD software such as Solidworks and FreeCAD for creating 3D models as well as creating logos and icons using vector art software like Illustrator and Inkscape.
+      <p>My design skills include UI/UX design for creating user experiences that are intuitive and tailored to the user's needs. I also have experience with CAD software such as Solidworks and FreeCAD for creating 3D models as well as creating logos and icons using vector art software like Illustrator and Inkscape.
       </p>
       <p>On the front-end web development side, I have experience with visual frameworks like Vanilla CSS, Tailwinds, Bootstrap as well as JavaScript frameworks like React.js, Next.js, Node.js, Express.js.
       </p>
