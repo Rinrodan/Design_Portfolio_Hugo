@@ -47,7 +47,7 @@ body {
     max-width: var(--max-width);
     min-width: 380px;
 }
-@media screen and (max-width:var(--media-sm)) {
+@media screen and (max-width: 640px) {
     .row, .navbar {   
         flex-direction: column;
     }
@@ -215,7 +215,7 @@ body {
     margin-top: 2rem;
     box-shadow: 2px 2px 10px black;
     transition-timing-function: ease-in-out;
-    transition-duration: 300ms;
+    transition-duration: 600ms;
 }
 .modal__textContainer {
     display: flex;
@@ -224,11 +224,10 @@ body {
     height: max-content;
     margin: auto;
     margin-right: 0;
+    transition-timing-function: ease-in-out;
+    transition-duration: 600ms;
 }
-.modal__imageContainer:hover + .modal__textContainer {
-    width: 80%;
-    height: auto;
-}
+
 .modal__miniGallery {
     display: flex;
     flex-direction: column;
@@ -237,6 +236,8 @@ body {
     margin: auto;
     padding-top: 4rem;
     object-fit: scale-down;
+    transition-timing-function: ease-in-out;
+    transition-duration: 300ms;
 }
 .modal__miniGallery  img{
     display: flex;
@@ -255,7 +256,7 @@ body {
     }
 }
 
-@media (max-width:var(--media-md)) {
+@media (max-width: 740px) {
     .modal__textContainer {
         width: 100%;
     }
@@ -265,11 +266,11 @@ body {
         box-sizing: border-box;
     }
 }
-@media (min-width: 750px) {
+@media (min-width: 740px) {
     .modal__imageContainer {
         width: 50%;
         height: auto;
-        max-width: 600px;
+      
         z-index: 1000;
         &.modal__textContainer {
             width: 100%;
@@ -277,12 +278,13 @@ body {
             background-color: yellow;
         }
     }
-    .modal__imageContainer:hover {
-        width: 80%;
+    .modal__imageContainer:hover + .modal__textContainer  {
+        width: 100%;
         height: auto;
-        max-width: 600px;
         z-index: 1000;
+
     }
+
 }
 /* inspired by https://codepen.io/Idered/pen/DdeoeW */
 /* xxxxxxxxx UTILITIES xxxxxxxxxxxxxxxxx */
@@ -364,7 +366,9 @@ body {
         }
     }
 }
-
+.navBar2ULOther {
+    display: none;
+}
 .navButtons {
     display: none;
     flex-direction: row;
@@ -597,19 +601,23 @@ body {
     margin-left: 0;
     width: 10rem;
 }
-@media (max-width:var(--media-md)) {
+@media (max-width: 740px) {
     .navButtons {
         gap: 0.5rem;
 
     padding: .5rem 1rem
     }
+    
 }
-@media (min-width: 750px) {
+@media (min-width: 740px) {
     .header {
         top: 0;
         width: 80%;
         max-width: var(--max-width);
         margin: auto;
+    }
+    .navBar2ULOther {
+        display: flex;
     }
 }
 /* xxxxxxxxxxxxxxx NAVBAR xxxxxxxxxxxxx */
@@ -619,7 +627,7 @@ body {
     flex-direction: column;
     width: 100%;
     max-width: var(--max-width);
-    height: 60vh;
+    height: 100vh;
     margin: auto;
     margin-top: 4rem;
     text-decoration: none;
@@ -672,12 +680,12 @@ body {
         margin-right: 0;
     }
 }
-@media (min-width: 750px) {
+@media (min-width: 740px) {
     .skillMiniContainer{
         display: flex;
     }
     }
-@media (max-width:var(--media-md)) {
+@media (max-width: 740px) {
     .hero {
         flex-direction: column;}
     .heroImageContainer {
@@ -794,7 +802,7 @@ body {
     transition-timing-function: ease-in-out;
     transition-duration: 300ms;
 }
-@media (max-width:var(--media-lg)) {
+@media (max-width: 740px) {
     .gallery {
         flex-direction: column;
         justify-content: center;
@@ -863,7 +871,7 @@ width: 30%;
     justify-content: flex-start;
     width: 12rem;
 }
-@media (max-width:var(--media-sm)) {
+@media (max-width: 640px) {
     .aboutImageContainer {
         width: 100%;
         height: auto;
