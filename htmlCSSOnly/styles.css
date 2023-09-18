@@ -84,10 +84,9 @@ body {
     flex-direction: row;
     padding: .5rem 1rem;
     width: fit-content;
-    gap: 0.5rem;
+    gap: 1rem;
     color: var(--font-light-color);
-    margin-top: 0,5%;
-    margin-bottom: 0.5%;
+    margin-top: 1%;
     background-color: var(--accent-color);
     border-radius: 999rem;
     font-size: var(--text-md);
@@ -659,13 +658,14 @@ body {
 }
 .hero img {
     display: block;
-    margin: auto; 
+    margin: auto;
     height: 100%;
 }
 .skillMiniContainer {
     display: none;
     flex-direction: column;
     justify-content: space-around;
+    height: 10rem;
     text-shadow: 1px 1px 1px black;
     
     & #skillPillOne {
