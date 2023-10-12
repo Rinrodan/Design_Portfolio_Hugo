@@ -334,7 +334,7 @@ body {
     width: 100%;
     justify-content: space-between;
     margin: auto;
-    height: 100%;
+    height: 3rem;
     background-color: rgb(44, 83, 44); 
     /* with the gap betreen lis this creates the inner border */
 }
@@ -345,8 +345,7 @@ body {
     height: 100%;
     margin: auto;
     padding: 0;
-    justify-content: space-around;
-    gap: 2px;  
+    justify-content: space-between; 
     & li {
         vertical-align: middle;
         background-color: rgb(164, 253, 164);
@@ -368,6 +367,7 @@ body {
 }
 .navBar2ULOther {
     display: none;
+    padding: 0;
 }
 .navButtons {
     display: none;
@@ -406,17 +406,33 @@ body {
 .navButton2 {
     list-style: none;
     text-decoration: none;
+    font-size: larger;
     color: #000; 
-    margin: auto;
+    margin: 0;
+    padding: 1rem;
     list-style-type: none;
-    border: 2px solid black;
-    background-color: #aaa;
+   color: var(--font-light-color);
+    text-shadow: 1px 1px 3px rgb(0, 0, 0);
+    transition-timing-function: ease-in-out;
+    transition-duration: 300ms;
+    &:hover {
+        font-size: 2rem;
+        scale: 2;
+        transform: translate(0px, 20px);
+        text-shadow: 1px 1px 5px rgb(0, 0, 0);
+    }
 }
 #homeButton {
-    width: 4rem;
+    display: flex;
+    width: min-content;
+    padding: 0;
+    margin-left: 0;
+   
 }
 #otherNavButtons {
-    width: 50%;
+    width: auto;
+    margin: auto;
+
 }
 /* Main menu */
 .hamburger {
@@ -435,7 +451,7 @@ body {
 	padding: 0px 0 0 0;
 	list-style: none;  
 }
-@media screen and (min-width: 640px) {
+@media screen and (min-width: 740px) {
     #menu {   
         visibility: hidden;
     }
@@ -604,8 +620,7 @@ body {
 @media (max-width: 740px) {
     .navButtons {
         gap: 0.5rem;
-
-    padding: .5rem 1rem
+        padding: .5rem 1rem
     }
     
 }
@@ -669,13 +684,16 @@ body {
     text-shadow: 1px 1px 1px black;
     
     & #skillPillOne {
+        display: flex;
         margin: auto;
         margin-left: 0;
     }
     & #skillPillTwo {
+        display: flex;
         margin: auto;
     }
     & #skillPillThree {
+        display: flex;
         margin: auto;
         margin-right: 0;
     }
