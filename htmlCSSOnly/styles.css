@@ -127,9 +127,11 @@ body {
     bottom: 0;
     left: 0;
     text-align: left;
+    z-index: 2;
     background: rgba(0,0,0, .9);
     transition: opacity .25s ease;
 }
+
 .modal img {
     z-index: 100;
     width: 100%;
@@ -286,6 +288,101 @@ body {
 
 }
 /* inspired by https://codepen.io/Idered/pen/DdeoeW */
+/* ======= tabs ========= */
+.tabs {
+	display: flex;
+	flex-wrap: wrap; 
+}
+.tabs label {
+	order: 1; 
+	display: block;
+	padding: 1rem 2rem;
+	margin-right: 0.2rem;
+	cursor: pointer;
+  background: #90CAF9;
+  font-weight: bold;
+  transition: background ease 0.2s;
+}
+.tabs .tab {
+  order: 99; 
+  flex-grow: 1;
+	width: 100%;
+	display: none;
+  padding: 1rem;
+  background: #fff;
+}
+.tabs input[type="radio"] {
+	display: none;
+}
+.tabs input[type="radio"]:checked + label {
+	background: #fff;
+}
+.tabs input[type="radio"]:checked + label + .tab {
+	display: block;
+}
+
+@media (max-width: 45em) {
+  .tabs .tab,
+  .tabs label {
+    order: initial;
+  }
+  .tabs label {
+    width: 100%;
+    margin-right: 0;
+    margin-top: 0.2rem;
+  }
+}
+
+/**
+ * Generic Styling
+*/
+body {
+  background: #eee;
+  min-height: 100vh;
+	box-sizing: border-box;
+	padding-top: 10vh;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+  font-weight: 300;
+  line-height: 1.5;
+  /*max-width: 60rem;*/
+  margin: 0 auto;
+  font-size: 112%;
+}
+
+/*****color****/
+#tabone-content {
+  color: white;
+  background: red;
+}
+
+#tabtwo-content {
+  color: white;
+  background: #f7961d;
+}
+
+#tab3-content {
+  color: white;
+  background: #8bc53e;
+}
+
+
+#tab3-tab {
+  color: white;
+  background: #8bc53e;
+}
+
+#tabfour-tab {
+  color: white;
+  background: #00abc9;
+}
+
+#tabfour-content {
+  color: white;
+  background: #00abc9;
+}
+/* https://codepen.io/yo_i_am_cuban_b/pen/QWNvGxj */
+/* xxxx TABS xxxxxx */
+
 /* xxxxxxxxx UTILITIES xxxxxxxxxxxxxxxxx */
 /* ----------  NAVBAR ----------- */
 .header {
@@ -798,6 +895,7 @@ body {
     transition-timing-function: ease-in-out;
     transition-duration: 300ms;
 }
+
 .galleryCardImageContainer {
     display: flex;
     object-fit: cover;
@@ -810,6 +908,14 @@ body {
     box-shadow: 5px 5px 10px black;
     transition-timing-function: ease-in-out;
     transition-duration: 300ms;
+}
+.galleryImageTitle {
+    position:absolute;
+    padding-top: 2rem;
+    width: 100%;
+    height: auto;
+    font-size: xx-large;
+    z-index: 1;
 }
 .galleryImage {
     display: flex;
