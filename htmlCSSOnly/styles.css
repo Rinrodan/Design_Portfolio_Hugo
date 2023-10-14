@@ -3,6 +3,10 @@
     --primary-color: rgba(0, 100, 100, 0.5);
     --secondary-color: rgba(0, 100, 100, 0.5);
     --accent-color: rgba(3, 82, 46, 0.8);
+    --tab-one-color: rgb(13, 112, 36);
+    --tab-two-color: rgb(11, 95, 36);
+    --tab-three-color: rgb(8, 74, 32);
+    --tab-four-color: rgb(5, 60, 25);
     --button-background-color:rgba(6, 198, 57, 0.5);
     --font-light-color: rgb(255, 255, 255);
     --font-dark-color: rgb(1, 56, 22);
@@ -163,19 +167,26 @@ body {
     position: absolute;
     display: flex;
     flex-wrap: wrap;
-    flex-direction: row;
-    top: -20%;
+    overflow: scroll;
+    flex-direction: column;
+    top: 0;
     right: 0;
     bottom: 0;
     left: 0;
+    height: 70%;
     width: 75%;
     max-width: var(--max-width);
     margin: auto;
-    overflow: auto;
+    margin-top: 10%;
+    padding-top: 0;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-bottom: 5rem;
+
     background: #fff;
     border-radius: 5px;
-    padding: 1em 2em;
-    height: 75%;
+
+
 }
 .modal__close {
     position: absolute;
@@ -292,30 +303,51 @@ body {
 .tabs {
 	display: flex;
 	flex-wrap: wrap; 
+    justify-content:center;
+    height: 80%;
+    width: 100%;
+    
 }
 .tabs label {
 	order: 1; 
 	display: block;
 	padding: 1rem 2rem;
+    margin-top: 0px;
 	margin-right: 0.2rem;
+    height: 2rem;
 	cursor: pointer;
-  background: #90CAF9;
-  font-weight: bold;
-  transition: background ease 0.2s;
+    background: #90CAF9;
+    font-weight: bold;
+    transition: background ease 0.2s;
+    border-top-left-radius: .4rem;
+    border-top-right-radius: .4rem;
+   
 }
 .tabs .tab {
-  order: 99; 
-  flex-grow: 1;
-	width: 100%;
+    order: 99; 
+    flex-grow: 1;
+    height: 100%;
+	width: 50%;
 	display: none;
-  padding: 1rem;
-  background: #fff;
+    margin-top: 0px;
+    margin: auto;
+    padding: 5%;
+    box-shadow: 5px -5px 4px rgba(0, 0, 0, 0.5);
+    background: #fff;
+    border-radius: .2rem;
+}
+.tabContent {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
 }
 .tabs input[type="radio"] {
 	display: none;
 }
 .tabs input[type="radio"]:checked + label {
 	background: #fff;
+    z-index: 1;
+    box-shadow: 5px -5px 4px rgba(0, 0, 0, 0.5);
 }
 .tabs input[type="radio"]:checked + label + .tab {
 	display: block;
@@ -325,60 +357,62 @@ body {
   .tabs .tab,
   .tabs label {
     order: initial;
+    box-shadow: 0px 0px 0px rgb(0, 0, 0);
   }
   .tabs label {
     width: 100%;
     margin-right: 0;
     margin-top: 0.2rem;
   }
-}
+
+  }
+
 
 /**
  * Generic Styling
 */
-body {
-  background: #eee;
-  min-height: 100vh;
-	box-sizing: border-box;
-	padding-top: 10vh;
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
-  font-weight: 300;
-  line-height: 1.5;
-  /*max-width: 60rem;*/
-  margin: 0 auto;
-  font-size: 112%;
-}
+
 
 /*****color****/
-#tabone-content {
-  color: white;
-  background: red;
+#tabOneTab {
+    color:  white;
+    text-shadow: 0px 0px 4px rgb(0, 0, 0);
+    background: var(--tab-one-color);
 }
-
-#tabtwo-content {
-  color: white;
-  background: #f7961d;
+#tabOneContent {
+    color:  white;
+    text-shadow: 0px 0px 4px rgb(0, 0, 0);
+    background: var(--tab-one-color);
 }
-
-#tab3-content {
-  color: white;
-  background: #8bc53e;
+#tabTwoTab {
+    color:  white;
+    text-shadow: 0px 0px 4px rgb(0, 33, 5);
+    background: var(--tab-two-color);
 }
-
-
-#tab3-tab {
-  color: white;
-  background: #8bc53e;
+#tabTwoContent {
+    color:  white;
+    text-shadow: 0px 0px 4px rgb(0, 33, 5);
+    background: var(--tab-two-color);
 }
-
-#tabfour-tab {
-  color: white;
-  background: #00abc9;
+#tabThreeTab {
+    color:  white;
+    text-shadow: 0px 0px 2px black;
+    background: var(--tab-three-color);
 }
-
-#tabfour-content {
-  color: white;
-  background: #00abc9;
+#tabThreeContent {
+    color:  white;
+    text-shadow: 0px 0px 2px black;
+    background: var(--tab-three-color);
+}
+#tabFourTab {
+    color:  white;
+    text-shadow: 0px 0px 2px black;
+    background: var(--tab-four-color);
+}
+#tabFourContent {
+    color: white;
+    text-shadow: 0px 0px 4px black;
+    background: var(--tab-four-color);
 }
 /* https://codepen.io/yo_i_am_cuban_b/pen/QWNvGxj */
 /* xxxx TABS xxxxxx */
@@ -940,6 +974,139 @@ body {
         scale: 1.1;
     }
 }
+/* ===================   carousel   ============== */
+.carousel {
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 100%;
+    height: 100%;
+}
+
+ul.slides {
+    display: block;
+    position: relative;
+    height: 600px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    list-style: none;
+}
+
+.slides * {
+    user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+}
+
+ul.slides input {
+    display: none; 
+}
+
+
+.slide-container { 
+    display: block; 
+}
+
+.slide-image {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    opacity: 0;
+    transition: all .7s ease-in-out;
+}   
+
+.slide-image img {
+    width: auto;
+    min-width: 100%;
+    height: 100%;
+}
+
+.carousel-controls {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    font-size: 100px;
+    line-height: 600px;
+    color: #fff;
+}
+
+.carousel-controls label {
+    display: none;
+    position: absolute;
+    padding: 0 20px;
+    opacity: 0;
+    transition: opacity .2s;
+    cursor: pointer;
+}
+
+.slide-image:hover + .carousel-controls label{
+    opacity: 0.5;
+}
+
+.carousel-controls label:hover {
+    opacity: 1;
+}
+
+.carousel-controls .prev-slide {
+    width: 49%;
+    text-align: left;
+    left: 0;
+}
+
+.carousel-controls .next-slide {
+    width: 49%;
+    text-align: right;
+    right: 0;
+}
+
+.carousel-dots {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 20px;
+    z-index: 999;
+    text-align: center;
+}
+
+.carousel-dots .carousel-dot {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #fff;
+    opacity: 0.5;
+    margin: 10px;
+}
+
+input:checked + .slide-container .slide-image {
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 1s ease-in-out;
+}
+
+input:checked + .slide-container .carousel-controls label {
+     display: block; 
+}
+
+input#img-1:checked ~ .carousel-dots label#img-dot-1,
+input#img-2:checked ~ .carousel-dots label#img-dot-2,
+input#img-3:checked ~ .carousel-dots label#img-dot-3,
+input#img-4:checked ~ .carousel-dots label#img-dot-4,
+input#img-5:checked ~ .carousel-dots label#img-dot-5,
+input#img-6:checked ~ .carousel-dots label#img-dot-6 {
+	opacity: 1;
+}
+
+
+input:checked + .slide-container .nav label { display: block; }
+/* xxxxxxxxxxxxxxxxx    carousel    xxxxxxxxxxxxxxxxx */
 /* xxxxxxxxxxxxxxx GALLERY xxxxxxxxxxxxx */
 /* ------------------------ ABOUT ----- */
 .about {
