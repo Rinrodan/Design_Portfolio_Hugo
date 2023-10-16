@@ -5,24 +5,30 @@
         width: 80%;
         flex-direction: row;
         height: 50vh;
+        min-height: 400px;
         margin: auto;
         background-color: aqua;
 
     }
+
     .carouselSideImages {
         display: flex;
         flex-direction: column;
         width: max-content;
         height: max-content;
         margin: auto;
-        gap: 4px;
+        margin-left: 0;
+        gap: 2rem;
         padding: 4px;
+        object-fit: scale-down;
   
         & img {
-            object-fit: scale-down;
-            height: 80px;
-            width: 80px;
+          
+            height: 50px;
+            width: auto;
             opacity: .5;
+            margin: auto;
+            margin-left: o;
             transition-timing-function: ease-in-out;
             transition-duration: 300ms;
             &:hover {
@@ -30,71 +36,42 @@
             }
         }
     }
-    .GCSlide {
-        display: flex;
-        visibility: hidden;
-        flex-direction: row;
-        width: 100%;
-        height: 50%;
-        margin: auto;
-        background-color: rgba(165, 42, 42, 0.509);
-        transition-timing-function: ease-in-out;
-            transition-duration: 300ms;
-        & img {
-            display: block;
-           
-            position: absolute;
-            left: 0;
-            object-fit: scale-down;
-            height: 400px;
-            width: auto;
-        }
-    }
-    .GCSlide-state {
+.GCSlide {
+    display: none;
+    position: relative;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 50%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.9);
+}
+.GCSlide-state {
     display: none;
 }
-.GCSlide-state:checked + .GCSlide {
-    opacity: 1;
-    visibility: visible;
-
-
+.GCSlide-state:checked ~ .GCSlide {
+    display:block;
 }
-.GCSlide-state:checked + .GCSlide .modal__inner {
+.GCSlide-state:checked ~ .GCSlide .modal__inner {
     top: 0;
+
+    
 }
 .GCSlide__inner {
-    transition: top .25s ease;
-    position: absolute;
-    display: flex;
-    flex-wrap: wrap;
-    overflow: scroll;
-    flex-direction: column;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    height: 70%;
-    width: 75%;
-   
-    margin: auto;
-    margin-top: 10%;
-    padding-top: 0;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    padding-bottom: 5rem;
-
-    background: #fff;
-    border-radius: 5px;
+position: absolute;
+left: 0;
+top: 0;
 
 
 }
 .GCSlide__close {
-    position: absolute;
-    right: 1em;
-    top: 1em;
-    width: 1.1em;
-    height: 1.1em;
-    cursor: pointer;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 40px;
+  font-weight: bold;
+  color: #fff;
 }
 .GCSlide__close:after,
 .GCSlide__close:before {
@@ -102,7 +79,7 @@
     position: absolute;
     width: 2px;
     height: 1.5em;
-    background: #ccc;
+    background: #490be7;
     display: block;
     transform: rotate(45deg);
     left: 50%;
@@ -116,10 +93,52 @@
 .GCSlide__close:before {
     transform: rotate(-45deg);
 }
+/* uuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu */
+.btn{
+    background-color: #147;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 49px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.btn:hover{
+    background-color: #148;
+}
+
+#mendu{
+    display: none;
+    position: absolute;
+    z-index: 1000;
+    min-width: 10rem;
+    padding: .5rem 0;
+    margin: 0;
+    font-size: 1rem;
+    color: #212529;
+    text-align: left;
+    list-style: none;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0,0,0,.15);
+    border-radius: .25rem;
+}
+
+#mendu.show {
+    display: block;
+}
+
+.mendu-item{
+    padding: 8px 20px;
+    cursor: pointer;
+}
+/* uuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu */
+
 </style>
 
+
 <div class="galleryCarousel">
-    
     <div class="GCSlide">
         <img src="images/mr-potato-4.svg">
         <img src="images/319.png">
@@ -128,39 +147,48 @@
     </div>
     <div class="carouselSideImages">
         <label class="buttonLabel" for="GCSlide-1">
-            <img src="./images/mr-potato-4.svg" alt=""  width="500px" height="500px" class="galleryImage"/>
+            <img src="./images/mr-potato-4.svg" alt="" width="500px" height="500px"/>
         </label>
         <label class="buttonLabel" for="GCSlide-2">
-            <img src="./images/319.png" alt=""  width="500px" height="500px" class="galleryImage"/>
+            <img src="./images/319.png" alt="" width="500px" height="500px"/>
         </label>
         <label class="buttonLabel" for="GCSlide-3">
-            <img src="./images/HB1.png" alt=""  width="500px" height="500px" class="galleryImage"/>
+            <img src="./images/HB1.png" alt="" width="500px" height="500px"/>
         </label>
         <label class="buttonLabel" for="GCSlide-4">
-            <img src="./images/spTile2.png" alt=""  width="500px" height="500px" class="galleryImage"/>
+            <img src="./images/spTile2.png" alt="" width="500px" height="500px"/>
         </label>
-
+        <button onclick="toggleMendu()" class="btn">
+            click to show
+        </button>
+        <ul id="mendu">
+            <li class="mendu-item">Edit</li>
+            <li class="mendu-item">Delete</li>
+            <li class="mendu-item">Close</li> 
+        </ul>
     </div>
 
-<!-- ============================================= MODAL CONTENT ========== -->
-<input class="GCSlide-state" id="GCSlide-1" type="checkbox" onclick="getGCSlideOne()" />
+    <!-- ============================================= MODAL CONTENT ========== -->
+    <input class="GCSlide-state" id="GCSlide-1" type="checkbox"/>
 
     <div class="GCSlide">
-
       <div class="GCSlide__inner">
         <label class="GCSlide__close" for="GCSlide-1"></label>
-          <div id="galleryCarouselImageContainer"></div>
-          
+        <img src="./images/mr-potato-4.svg" alt="" width="500px" height="500px"/>
       </div>
-    </div>
 
+    </div>
+</div>
+<input class="GCSlide-state" id="GCSlide-2" type="checkbox"/>
+
+<div class="GCSlide">
+  <div class="GCSlide__inner">
+    <label class="GCSlide__close" for="GCSlide-2"></label>
+    <img src="./images/mr-potato-4.svg" alt="" width="500px" height="500px"/>
+  </div>
 
 </div>
-<script>
 
-    function getGCSlideOne(){
-        const GCSlideImageOne = '<img src="images/mr-potato-4.svg"/>';
-        return GCSlideImageOne;
-    }
+</div>
+<script src="../script.js"></script>
 
-</script>

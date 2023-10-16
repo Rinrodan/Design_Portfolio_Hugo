@@ -56,6 +56,27 @@ function loadHTML(){
     .then(response=> response.text())
     .then(text=> document.getElementById('galleryCarouselContainer').innerHTML = text);
   } getGalleryCarousel()
+
+  
+  const mendu = document.getElementById("mendu");
+
+  const toggleMendu = () => {
+    console.log(mendu);
+    if (mendu !== null) {
+      mendu.classList.toggle("show");
+  }}
+
+  window.onclick = (event) => {
+    if (!event.target.matches('.btn')) {
+      if(mendu !== null && mendu.classList.contains('show')){
+          mendu.classList.remove('show')
+      }
+  }
+}
+  
+  
+  mendu.addEventListener('click', (event) => event.stopPropagation());
+  
 //   function getHeaderContent(){
 //     fetch('./components/header.html')
 //     .then(response=> response.text())
