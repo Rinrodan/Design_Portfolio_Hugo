@@ -1,0 +1,166 @@
+
+<style>
+    .galleryCarousel {
+        display: flex;
+        width: 80%;
+        flex-direction: row;
+        height: 50vh;
+        margin: auto;
+        background-color: aqua;
+
+    }
+    .carouselSideImages {
+        display: flex;
+        flex-direction: column;
+        width: max-content;
+        height: max-content;
+        margin: auto;
+        gap: 4px;
+        padding: 4px;
+  
+        & img {
+            object-fit: scale-down;
+            height: 80px;
+            width: 80px;
+            opacity: .5;
+            transition-timing-function: ease-in-out;
+            transition-duration: 300ms;
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+    .GCSlide {
+        display: flex;
+        visibility: hidden;
+        flex-direction: row;
+        width: 100%;
+        height: 50%;
+        margin: auto;
+        background-color: rgba(165, 42, 42, 0.509);
+        transition-timing-function: ease-in-out;
+            transition-duration: 300ms;
+        & img {
+            display: block;
+           
+            position: absolute;
+            left: 0;
+            object-fit: scale-down;
+            height: 400px;
+            width: auto;
+        }
+    }
+    .GCSlide-state {
+    display: none;
+}
+.GCSlide-state:checked + .GCSlide {
+    opacity: 1;
+    visibility: visible;
+
+
+}
+.GCSlide-state:checked + .GCSlide .modal__inner {
+    top: 0;
+}
+.GCSlide__inner {
+    transition: top .25s ease;
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: scroll;
+    flex-direction: column;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 70%;
+    width: 75%;
+   
+    margin: auto;
+    margin-top: 10%;
+    padding-top: 0;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-bottom: 5rem;
+
+    background: #fff;
+    border-radius: 5px;
+
+
+}
+.GCSlide__close {
+    position: absolute;
+    right: 1em;
+    top: 1em;
+    width: 1.1em;
+    height: 1.1em;
+    cursor: pointer;
+}
+.GCSlide__close:after,
+.GCSlide__close:before {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 1.5em;
+    background: #ccc;
+    display: block;
+    transform: rotate(45deg);
+    left: 50%;
+    margin: -3px 0 0 -1px;
+    top: 0;
+}
+.GCSlide__close:hover:after,
+.GCSlide__close:hover:before {
+    background: #aaa;
+}
+.GCSlide__close:before {
+    transform: rotate(-45deg);
+}
+</style>
+
+<div class="galleryCarousel">
+    
+    <div class="GCSlide">
+        <img src="images/mr-potato-4.svg">
+        <img src="images/319.png">
+        <img src="images/HB1.png">
+        <img src="images/spTile2.png">
+    </div>
+    <div class="carouselSideImages">
+        <label class="buttonLabel" for="GCSlide-1">
+            <img src="./images/mr-potato-4.svg" alt=""  width="500px" height="500px" class="galleryImage"/>
+        </label>
+        <label class="buttonLabel" for="GCSlide-2">
+            <img src="./images/319.png" alt=""  width="500px" height="500px" class="galleryImage"/>
+        </label>
+        <label class="buttonLabel" for="GCSlide-3">
+            <img src="./images/HB1.png" alt=""  width="500px" height="500px" class="galleryImage"/>
+        </label>
+        <label class="buttonLabel" for="GCSlide-4">
+            <img src="./images/spTile2.png" alt=""  width="500px" height="500px" class="galleryImage"/>
+        </label>
+
+    </div>
+
+<!-- ============================================= MODAL CONTENT ========== -->
+<input class="GCSlide-state" id="GCSlide-1" type="checkbox" onclick="getGCSlideOne()" />
+
+    <div class="GCSlide">
+
+      <div class="GCSlide__inner">
+        <label class="GCSlide__close" for="GCSlide-1"></label>
+          <div id="galleryCarouselImageContainer"></div>
+          
+      </div>
+    </div>
+
+
+</div>
+<script>
+
+    function getGCSlideOne(){
+        const GCSlideImageOne = '<img src="images/mr-potato-4.svg"/>';
+        return GCSlideImageOne;
+    }
+
+</script>

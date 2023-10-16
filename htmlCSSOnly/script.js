@@ -51,11 +51,49 @@ function loadHTML(){
     .then(response=> response.text())
     .then(text=> document.getElementById('about').innerHTML = text);
   } getAbout()
-
-  function getHeaderContent(){
-    fetch('./components/header.html')
+  function getGalleryCarousel(){
+    fetch('./components/galleryCarousel.html')
     .then(response=> response.text())
-    .then(text=> document.getElementById('headerContent').innerHTML = text);
-  } getHeaderContent()
+    .then(text=> document.getElementById('galleryCarouselContainer').innerHTML = text);
+  } getGalleryCarousel()
+//   function getHeaderContent(){
+//     fetch('./components/header.html')
+//     .then(response=> response.text())
+//     .then(text=> document.getElementById('headerContent').innerHTML = text);
+//   } getHeaderContent()
+
+//xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+ // carousel  ========================================
+//  let carouselNavLinks = document.querySelectorAll(".carouselNavLink");
+//  let slides = document.querySelectorAll(".slideImage");
+//  let overlays = document.querySelectorAll(".bar");
+//  let maxZIndex = carouselNavLinks.length;
+//  let easeInOutQuart = "cubic-bezier(0.77, 0, 0.175, 1)";
+//  slides[0].classList.add("active");
+//  carouselNavLinks[0].classList.add("active");
+
+//  consle.table(carouselNavLinks);
+
+//  carouselNavLinks.forEach((carouselNavLink, activeIndex) => {
+//      overlays[activeIndex].style.zIndex = `${carouselNavLinks.length - activeIndex}`;
+
+//      carouselNavLink.addEventListener("click", () => {
 
 
+//          carouselNavLinks.forEach((link) => link.classList.remove("active"));
+//          carouselNavLink.classList.add("active");
+
+//          slides.forEach((slide) => slide.classList.remove("active"));
+//          slides[activeIndex].classList.add("active");
+
+//          overlays.forEach((overlay) => overlay.style.zIndex = "0");
+//          overlays[activeIndex].style.zIndex = `${maxZIndex++}`;
+
+//          overlays.forEach((overlay) => {
+//              overlay.animate(
+//                  [{ transform: "scaleX(0)" }, { transform: "scaleX(1)" }],
+//                  { duration: 1200, fill: "forwards", easing: easeInOutQuart }
+//              );
+//          });
+//      });
+//  });
