@@ -974,9 +974,153 @@ body {
         scale: 1.1;
     }
 }
-/* ===================   carousel   ============== 
-inside gallery.html
-xxxxxxxxxxxxxxxxx    carousel    xxxxxxxxxxxxxxxxx */
+/* /* ===================   carousel   ==============  */
+.carouselBody {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    height: 100%;
+    min-height: 750px;
+    width: 100%;
+    margin-top: 6rem;
+    
+    background: #a3e8aa2e;
+  }
+  .carousel {
+    display: flex;
+    width: 100%;
+    margin: auto;
+   
+    .slides {
+      display: flex;
+      margin: auto;
+      margin-top: -10%;
+      margin-left: 0;
+      .slideImage {
+        display: flex;
+        position: absolute;
+        width: 450px;
+        height: 450px;
+        opacity: 0;
+        z-index: 9999;
+        padding-left: 2rem;
+        transition-timing-function: ease-in-out;
+        transition-duration: 600ms;
+
+        &.active {
+          opacity: 1; }}}
+  
+    .overlays {
+      position: relative;
+      width: 36em;
+      height: 18em;
+      .bar {
+        position: absolute;
+        top:0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: var(--bar-color);
+        transform-origin: left; } }
+    
+    .carouselNavLinks {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      margin: auto;
+      padding: -6rem 0 0 6em;
+      list-style-type: none;
+      .carouselNavLink {
+        font-size: 2rem;
+        opacity: .5;
+        font-family: Lora, serif;
+        line-height: 1.5;
+        text-decoration: none;
+        color: #7f8c8d;
+        transition: 0.3s;
+        & img {
+          width: 50px;
+          height:auto;
+        }
+        &:hover {
+          opacity: .6;
+        }
+        &.active {
+          color: black;
+          pointer-events: none; 
+          opacity: 1;}}}}
+
+          .btn{
+            background-color: #147;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 49px;
+            font-weight: 500;
+            cursor: pointer;
+        }
+        
+        .btn:hover{
+            background-color: #148;
+        }
+        
+        #mendu{
+            display: none;
+            position: absolute;
+            z-index: 1000;
+            min-width: 10rem;
+            padding: .5rem 0;
+            margin: 0;
+            font-size: 1rem;
+            color: #212529;
+            text-align: left;
+            list-style: none;
+            background-color: #fff;
+            background-clip: padding-box;
+            border: 1px solid rgba(0,0,0,.15);
+            border-radius: .25rem;
+        }
+        
+        #mendu.show {
+            display: block;
+        }
+        
+        .mendu-item{
+            padding: 8px 20px;
+            cursor: pointer;
+        }
+        .slideComments{
+          position: relative;
+          display: flex;
+          height: min-content;
+          bottom: -85%;
+          left: -100%;
+          width: 100%;
+          padding-left: 10rem;
+          padding-right: 5rem;
+          padding-top: 2rem;
+          color: black;
+          transform-origin: left 100px; 
+        .slideComment {
+          opacity: 0;
+          display: flex;
+          position: absolute;
+          left: 40%;
+          top: 0;
+          width: 600px;
+          margin-left: 0;
+          height: auto;
+          text-align: left;
+          z-index: 3;
+          text-shadow: none;
+ 
+          &.active{
+            opacity: 1;
+          }
+        }}
+
+/* xxxxxxxxxxxxxxxxx    carousel    xxxxxxxxxxxxxxxxx */ */
 /* xxxxxxxxxxxxxxx GALLERY xxxxxxxxxxxxx */
 /* ------------------------ ABOUT ----- */
 .about {
@@ -1105,105 +1249,3 @@ width: 30%;
     font-size: small;
     font-weight: 200;
 }
-.carouselBody {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    height: 100%;
-    min-height: 400px;
-    width: 100%;
-    margin-top: 6rem;
-    background: #eaf4eb;
-  }
-  .carousel {
-    display: flex;
-    width: 100%;
-    margin: auto;
-    .slides {
-      display: flex;
-      margin: auto;
-      margin-top: -10%;
-      margin-left: 0;
-      .slideImage {
-        display: flex;
-        position: absolute;
-        width: 450px;
-        height: 450px;
-        opacity: 0;
-        z-index: 9999;
-        &.active {
-          opacity: 1; }}}
-  
-    .overlays {
-      position: relative;
-      width: 36em;
-      height: 18em;
-      .bar {
-        position: absolute;
-        top:0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: var(--bar-color);
-        transform-origin: left; } }
-    .carouselNavLinks {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: flex-start;
-      margin: auto;
-      padding: -6rem 0 0 6em;
-      list-style-type: none;
-      .carouselNavLink {
-        font-size: 2rem;
-        font-family: Lora, serif;
-        line-height: 1.5;
-        text-decoration: none;
-        color: #7f8c8d;
-        transition: 0.3s;
-        &:hover {
-          color: #1c1e1f;
-        }
-        &.active {
-          color: black;
-          pointer-events: none; }}}}
-
-          .btn{
-            background-color: #147;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            padding: 10px 49px;
-            font-weight: 500;
-            cursor: pointer;
-        }
-        
-        .btn:hover{
-            background-color: #148;
-        }
-        
-        #mendu{
-            display: none;
-            position: absolute;
-            z-index: 1000;
-            min-width: 10rem;
-            padding: .5rem 0;
-            margin: 0;
-            font-size: 1rem;
-            color: #212529;
-            text-align: left;
-            list-style: none;
-            background-color: #fff;
-            background-clip: padding-box;
-            border: 1px solid rgba(0,0,0,.15);
-            border-radius: .25rem;
-        }
-        
-        #mendu.show {
-            display: block;
-        }
-        
-        .mendu-item{
-            padding: 8px 20px;
-            cursor: pointer;
-        }

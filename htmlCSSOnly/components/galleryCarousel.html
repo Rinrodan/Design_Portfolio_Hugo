@@ -1,194 +1,167 @@
 
 <style>
-    .galleryCarousel {
-        display: flex;
-        width: 80%;
-        flex-direction: row;
-        height: 50vh;
-        min-height: 400px;
-        margin: auto;
-        background-color: aqua;
-
-    }
-
-    .carouselSideImages {
-        display: flex;
-        flex-direction: column;
-        width: max-content;
-        height: max-content;
-        margin: auto;
-        margin-left: 0;
-        gap: 2rem;
-        padding: 4px;
-        object-fit: scale-down;
-  
-        & img {
-          
-            height: 50px;
-            width: auto;
-            opacity: .5;
-            margin: auto;
-            margin-left: o;
-            transition-timing-function: ease-in-out;
-            transition-duration: 300ms;
-            &:hover {
-                opacity: 1;
-            }
-        }
-    }
-.GCSlide {
-    display: none;
-    position: relative;
-    z-index: 1;
-    left: 0;
-    top: 0;
+    .carouselBody {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    height: 100%;
+    min-height: 400px;
     width: 100%;
-    height: 50%;
-    overflow: auto;
-    background-color: rgba(0,0,0,0.9);
-}
-.GCSlide-state {
-    display: none;
-}
-.GCSlide-state:checked ~ .GCSlide {
-    display:block;
-}
-.GCSlide-state:checked ~ .GCSlide .modal__inner {
-    top: 0;
+    margin-top: 6rem;
+    background: #eaf4eb;
+  }
+  .carousel {
+    display: flex;
+    width: 100%;
+    margin: auto;
+    .slides {
+      display: flex;
+      margin: auto;
+      margin-top: -10%;
+      margin-left: 0;
+      .slideImage {
+        display: flex;
+        position: absolute;
+        width: 450px;
+        height: 450px;
+        opacity: 0;
+        z-index: 9999;
+        &.active {
+          opacity: 1; }}}
+  
+    .overlays {
+      position: relative;
+      width: 36em;
+      height: 18em;
+      .bar {
+        position: absolute;
+        top:0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: var(--bar-color);
+        transform-origin: left; } }
+    .carouselNavLinks {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      margin: auto;
+      padding: -6rem 0 0 6em;
+      list-style-type: none;
+      .carouselNavLink {
+        font-size: 2rem;
+        font-family: Lora, serif;
+        line-height: 1.5;
+        text-decoration: none;
+        color: #7f8c8d;
+        transition: 0.3s;
+        &:hover {
+          color: #1c1e1f;
+        }
+        &.active {
+          color: black;
+          pointer-events: none; }}}}
 
-    
-}
-.GCSlide__inner {
-position: absolute;
-left: 0;
-top: 0;
+          .btn{
+            background-color: #147;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 49px;
+            font-weight: 500;
+            cursor: pointer;
+        }
+        
+        .btn:hover{
+            background-color: #148;
+        }
+        
+        #mendu{
+            display: none;
+            position: absolute;
+            z-index: 1000;
+            min-width: 10rem;
+            padding: .5rem 0;
+            margin: 0;
+            font-size: 1rem;
+            color: #212529;
+            text-align: left;
+            list-style: none;
+            background-color: #fff;
+            background-clip: padding-box;
+            border: 1px solid rgba(0,0,0,.15);
+            border-radius: .25rem;
+        }
+        
+        #mendu.show {
+            display: block;
+        }
+        
+        .mendu-item{
+            padding: 8px 20px;
+            cursor: pointer;
+        }
 
-
-}
-.GCSlide__close {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  font-size: 40px;
-  font-weight: bold;
-  color: #fff;
-}
-.GCSlide__close:after,
-.GCSlide__close:before {
-    content: '';
-    position: absolute;
-    width: 2px;
-    height: 1.5em;
-    background: #490be7;
-    display: block;
-    transform: rotate(45deg);
-    left: 50%;
-    margin: -3px 0 0 -1px;
-    top: 0;
-}
-.GCSlide__close:hover:after,
-.GCSlide__close:hover:before {
-    background: #aaa;
-}
-.GCSlide__close:before {
-    transform: rotate(-45deg);
-}
 /* uuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu */
-.btn{
-    background-color: #147;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 49px;
-    font-weight: 500;
-    cursor: pointer;
+.testSmallImages {
+    height:50%;
+    width: 100%;
+    background-color: #212529;
+
+}
+/* Define the styles for the small image */
+.small-image {
+  width: 100px;
+  height: 100px;
+  cursor:pointer;
 }
 
-.btn:hover{
-    background-color: #148;
-}
-
-#mendu{
+/* Define the styles for the large image */
+.large-image {
     display: none;
-    position: absolute;
-    z-index: 1000;
-    min-width: 10rem;
-    padding: .5rem 0;
-    margin: 0;
-    font-size: 1rem;
-    color: #212529;
-    text-align: left;
-    list-style: none;
-    background-color: #fff;
-    background-clip: padding-box;
-    border: 1px solid rgba(0,0,0,.15);
-    border-radius: .25rem;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  height: 400px;
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 5s ease-in-out;
+}
+.large-image.visibility {
+    display:inline-block;
 }
 
-#mendu.show {
-    display: block;
+/* Define the styles for the large image when it's scaled up */
+.large-image.scaled-up {
+  transform: translate(-50%, -50%) scale(2);
 }
 
-.mendu-item{
-    padding: 8px 20px;
-    cursor: pointer;
+/* Define the styles for the large image when it's moved up */
+.large-image.moved-up {
+    transition: transform 5s ease-in-out;
+  top: 25%;
 }
-/* uuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu */
 
+/* CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC */
 </style>
 
 
 <div class="galleryCarousel">
-    <div class="GCSlide">
-        <img src="images/mr-potato-4.svg">
-        <img src="images/319.png">
-        <img src="images/HB1.png">
-        <img src="images/spTile2.png">
-    </div>
-    <div class="carouselSideImages">
-        <label class="buttonLabel" for="GCSlide-1">
-            <img src="./images/mr-potato-4.svg" alt="" width="500px" height="500px"/>
-        </label>
-        <label class="buttonLabel" for="GCSlide-2">
-            <img src="./images/319.png" alt="" width="500px" height="500px"/>
-        </label>
-        <label class="buttonLabel" for="GCSlide-3">
-            <img src="./images/HB1.png" alt="" width="500px" height="500px"/>
-        </label>
-        <label class="buttonLabel" for="GCSlide-4">
-            <img src="./images/spTile2.png" alt="" width="500px" height="500px"/>
-        </label>
-        <button onclick="toggleMendu()" class="btn">
-            click to show
-        </button>
-        <ul id="mendu">
-            <li class="mendu-item">Edit</li>
-            <li class="mendu-item">Delete</li>
-            <li class="mendu-item">Close</li> 
-        </ul>
-    </div>
+    
 
-    <!-- ============================================= MODAL CONTENT ========== -->
-    <input class="GCSlide-state" id="GCSlide-1" type="checkbox"/>
-
-    <div class="GCSlide">
-      <div class="GCSlide__inner">
-        <label class="GCSlide__close" for="GCSlide-1"></label>
-        <img src="./images/mr-potato-4.svg" alt="" width="500px" height="500px"/>
-      </div>
-
-    </div>
-</div>
-<input class="GCSlide-state" id="GCSlide-2" type="checkbox"/>
-
-<div class="GCSlide">
-  <div class="GCSlide__inner">
-    <label class="GCSlide__close" for="GCSlide-2"></label>
-    <img src="./images/mr-potato-4.svg" alt="" width="500px" height="500px"/>
-  </div>
+    
+<div class="testSmallImages">
+    <img src="images/mr-potato-4.svg" class="small-image" onclick="smallImageOneClick()"> 
+    <img src="images/mr-potato-4.svg" class="large-image" id="large-image-1">
 
 </div>
-
-</div>
-<script src="../script.js"></script>
+<script>
+  function smallImageOneClick(){
+    console.log("small image one click")
+            document.getElementById('large-image-1').classList.toggle('visibility')
+            document.querySelector('.large-image').classList.toggle('scaled-up');
+            document.querySelector('.large-image').classList.toggle('moved-up');
+        };
+    
+</script>
 
