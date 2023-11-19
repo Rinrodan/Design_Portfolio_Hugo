@@ -1,0 +1,23 @@
+[[images]]
+  image = "/images/mario-portrait.webp"
+  content_html = "1"
+
+[[images]]
+  image = "/images/work/garage1.png"
+  content_html = "2"
+
+[[images]]
+  image = "/images/work/garage2.png"
+  content_html = "3"
+
+[[images]]
+  image = "/images/work/mr-potato-4.svg"
+  content_html = "4"
+
+[[images]]
+  image = "/images/work/HB2.png"
+  content_html = "5"
+
+[[images]]
+  image = "/images/work/sptile2svg.svg"
+  content_html = "6"

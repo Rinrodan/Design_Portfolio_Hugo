@@ -1,0 +1,15 @@
+{{ define "main" }}
+{{ range .Pages }}
+<article
+    class="justify-self-center mx-auto mb-16 px-6 sm:px-4 md:px-0 prose dark:prose-invert prose-slate lg:prose-lg hover:prose-a:text-sky-500">
+
+    {{ $link := .Permalink }}
+    {{ $title := .Title }}
+    {{ $description := .Params.description }}
+    {{ $thumb := .Params.thumbnail }}
+    
+    {{ partial "components/ListPageCard.html" (dict "link" $link "title" $title "description" $description "thumb" $thumb) .}}
+
+</article>
+{{ end }}
+{{ end }}

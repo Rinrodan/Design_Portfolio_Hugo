@@ -1,0 +1,18 @@
+<style>
+    :root {
+        --percent: {{.percent}};
+    }
+    .skill {
+        width: var(--percent);
+        height: 100%;
+        background-color: blueviolet;
+        }
+</style>
+<div class="flex flex-row w-full justify-between">
+    <div class="w-3/12 m-0">
+        {{.skillName}}
+    </div>
+    <div class="flex flex-row w-full h-auto border-gray-300 border-2 m-0">
+        <div class="skill">{{.percent}}</div>
+    </div>
+</div>

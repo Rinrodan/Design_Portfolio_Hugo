@@ -1,0 +1,80 @@
+{{ define "main" }}
+{{ range .Site.Params.customJS }}
+    <link rel="stylesheet" href="{{ $.Site.BaseURL }}/{{ . }}">
+{{ end }}
+<style>
+    ::backdrop {
+        background-image: linear-gradient(
+          45deg,
+          magenta,
+          rebeccapurple,
+          dodgerblue,
+          green
+        );
+        opacity: 0.75;
+      }
+      
+</style>
+<article
+    class="justify-self-center mx-auto px-6 mb-16 sm:px-4 md:px-0 prose dark:prose-invert prose-slate lg:prose-lg hover:prose-a:text-sky-500">
+    <h1>{{ .Title }}</h1>
+    {{partial "components/prevNext.html" .}}
+    <!-- {{ partial "components/carousel.html" (dict "context" . "items" "1" "height" "50" "unit" "%" "duration" "7000") }} -->
+
+  
+    {{ .Content }}
+
+    <section>
+        <div class="grid grid-cols-3 grid-rows-6 gap-4">
+            <div class="flex col-span-2 row-span-2 overflow-hidden object-contain m-0 mt-0 p-0 ease-in-out duration-300 hover:ring-2">
+                {{ $id := "dialog1" }}
+                {{ $image := .Params.image_one }}
+                <div  height="500" width="500" class="flex h-full w-auto object-cover hover:scale-105 hover:translate-y-3 ease-in-out duration-300 mt-0 " >
+                    {{ partial "components/dialogOpenButton.html" (dict "value" $id "image" $image) .}}
+                </div>
+                {{ partial "components/GalleryDialog.html" (dict "id" $id "image" $image) .}}
+            </div>
+            <div class="row-span-2 col-start-3 overflow-hidden object-contain  m-0 p-0 hover:ring-2">
+                {{ $id := "dialog2" }}
+                {{ $image := .Params.image_two }}
+                <div  height="500" width="500" class="flex h-full w-auto object-cover hover:scale-105 hover:translate-y-3 ease-in-out duration-300" >
+                    {{ partial "components/dialogOpenButton.html" (dict "value" $id "image" $image) .}}
+                </div>
+                {{ partial "components/GalleryDialog.html" (dict "id" $id "image" $image) .}}
+            </div>
+            <div class="row-span-2 row-start-3 overflow-hidden object-contain  m-0 p-0 hover:ring-2">
+                {{ $id := "dialog3" }}
+                {{ $image := .Params.image_three }}
+                <div  height="500" width="500" class="flex h-full w-auto object-cover hover:scale-105 hover:translate-y-3 p-3 ease-in-out duration-300" >
+                    {{ partial "components/dialogOpenButton.html" (dict "value" $id "image" $image) .}}
+                </div>
+                {{ partial "components/GalleryDialog.html" (dict "id" $id "image" $image) .}}
+            </div>
+            <div class="col-span-2 row-span-2 row-start-3 overflow-hidden object-contain m-0 p-0 hover:ring-2">
+                {{ $id := "dialog4" }}
+                {{ $image := .Params.image_four }}
+                <div  height="500" width="500" class="flex h-full w-auto object-cover hover:scale-105 hover:translate-y-3 p-3 ease-in-out duration-300" >
+                    {{ partial "components/dialogOpenButton.html" (dict "value" $id "image" $image) .}}
+                </div>
+                {{ partial "components/GalleryDialog.html" (dict "id" $id "image" $image) .}}
+            </div>
+            <div class="col-span-2 row-span-2 row-start-5 overflow-hidden object-contain  m-0 p-0 hover:ring-2">
+                {{ $id := "dialog5" }}
+                {{ $image := .Params.image_five }}
+                <div  height="500" width="500" class="flex h-full w-auto object-cover hover:scale-105 hover:translate-y-3 p-3 ease-in-out duration-300" >
+                    {{ partial "components/dialogOpenButton.html" (dict "value" $id "image" $image) .}}
+                </div>
+                {{ partial "components/GalleryDialog.html" (dict "id" $id "image" $image) .}}
+            </div>
+            <div class="row-span-2 col-start-3 row-start-5 overflow-hidden object-contain  m-0 p-0 hover:ring-2">
+                {{ $id := "dialog6" }} {{ $image := .Params.image_six }}
+                <div  height="500" width="500" class="flex h-full w-auto object-cover hover:scale-105 hover:translate-y-3 p-3 ease-in-out duration-300" >
+                    {{ partial "components/dialogOpenButton.html" (dict "value" $id "image" $image) .}}
+                </div>
+                {{ partial "components/GalleryDialog.html" (dict "id" $id "image" $image) .}}
+            </div>
+        </div>
+    </section>
+</article>
+
+{{ end }}

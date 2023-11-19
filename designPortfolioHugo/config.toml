@@ -1,0 +1,5 @@
+baseURL = 'http://example.org/'
+languageCode = 'en-us'
+title = 'Mario Bustillos'
+theme = 'hugoTWCSS'
+customJS = 'js/modal.js'

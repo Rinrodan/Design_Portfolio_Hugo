@@ -1,0 +1,13 @@
+<div class="flex justify-around  light:text-slate-100 pb-4">
+    {{ with .Next }}
+    <a href="{{ .RelPermalink }}" class="flex dark:bg-slate-600 bg-slate-200 rounded-md shadow-md shadow-black pl-2 pr-2">
+        Prev
+    </a>
+  {{ end }}
+  
+  {{ with .Prev }}
+    <a href="{{ .RelPermalink }}" class="flex dark:bg-slate-600 bg-slate-200 rounded-md shadow-md shadow-black pl-2 pr-2">
+        Next
+    </a>
+  {{ end }}
+</div>

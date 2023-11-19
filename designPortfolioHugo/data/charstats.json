@@ -1,0 +1,29 @@
+{
+    "mario": [
+        {"characterimage": "https://i.pinimg.com/originals/b5/57/1a/b5571a638e8ca33b6c4bbb34e4ea7add.jpg"},
+        {"skills": [
+            {"visual": {
+                "CSS": 80,
+                "TailwindCSS": 70,
+                "Bootsrtap": 40,
+                "wisdom": 16,
+                "charisma": 10
+            }},
+            {"frontend": {
+                "Javascript": 50,
+                "GO": 20,
+                "Hugo": 80,
+                "React": 70,
+                "NEXT": 40
+            }},
+            {"backend": {
+                "API": 60,
+                "NEXT": 40,
+                "MongoDB": 40,
+                "Apollo": 40,
+                "PostgresDB": 60,
+                "Express": 50
+            }}
+        ]}
+    ]
+}   
