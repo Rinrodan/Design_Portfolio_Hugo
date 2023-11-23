@@ -1,4 +1,27 @@
 <footer class="bottom-0 w-full p-4 text-xs text-center text-slate-500 border-t border-slate-200 dark:border-slate-700">
-    <p>made with <a href="https://gohugo.io" class="underline hover:text-sky-400">Hugo</a></p>
     
+    <p>made with <a href="https://gohugo.io" class="underline hover:text-sky-400">Hugo</a></p>
+
+    <script>       
+        const button = document.querySelector('#myButton');
+
+        button.addEventListener('click', () => {
+            console.log("AAAHHHHHHH")
+            alert("AAAAAHHHHHHH")
+          
+        });
+        const statColors = document.getElementsByClassName('statColor');
+            for (let i = 0; i < statColors.length; i++) {
+              const color = statColors[i].innerHTML;
+              statColors[i].style.backgroundColor = color;
+            }
+            
+        const statWidths = document.getElementsByClassName('statColor');
+            for (let i = 0; i < statWidths.length; i++) {
+                const width = statWidths[i].getAttribute('title');
+                statWidths[i].style.width = width;
+              }
+
+    </script>
+
 </footer>

@@ -14,14 +14,7 @@
         --percent3: {{.Params.skillThreePercent}};
         --percent4: {{.Params.skillFourPercent}};
         }
-    @keyframes slideInFromLeft {
-        0% {
-            transform: translateX(-100%);
-        }
-        100% {
-            transform: translateX(0);
-        }
-        }
+
     
     .skillOne{
         width: var(--percent1);
@@ -46,10 +39,7 @@
         background-color: rgba(128, 0, 26, 0.582);
         height: 1.2rem;
 
-    }
-    .delay {
-        animation: 2s ease-out 3s 1 slideInFromLeft;
-    ;
+
 }
 
 
@@ -75,16 +65,16 @@
         </div>
         <div class="flex flex-col h-auto w-7/12 justify-evenly">
             <div class="flex flex-row w-full h-auto border-gray-300 border-2 m-auto overflow-hidden">
-                <div class="skillOne delay"></div>
+                <div class="skillOne delaySlideInFromLeft"></div>
             </div>
             <div class="flex flex-row w-full h-auto border-gray-300 border-2  m-auto overflow-hidden">
-                <div class="skillTwo delay"></div>
+                <div class="skillTwo delaySlideInFromLeft"></div>
             </div>
             <div class="flex flex-row w-full h-auto border-gray-300 border-2 m-auto overflow-hidden">
-                <div class="skillThree delay"></div>
+                <div class="skillThree delaySlideInFromLeft"></div>
             </div>
             <div class="flex flex-row w-full h-auto border-gray-300 border-2 m-auto overflow-hidden">
-                <div class="skillFour delay"></div>
+                <div class="skillFour delaySlideInFromLeft"></div>
             </div>
         </div>
 
@@ -93,7 +83,7 @@
                {{.Params.skillOneName}}
             </div>
             <div class="flex flex-row w-full h-auto border-gray-300 border-2 m-0 ml-2 overflow-hidden">
-                <div class="skillOne delay"></div>
+                <div class="skillOne delaySlideInFromLeft"></div>
             </div>
         </div>
         <div class="flex flex-row w-full justify-between">
@@ -101,7 +91,7 @@
                {{.Params.skillTwoName}}
             </div>
             <div class="flex flex-row w-full h-auto border-gray-300 border-2 m-0 ml-2 overflow-hidden">
-                <div class="skillTwo delay"></div>
+                <div class="skillTwo delaySlideInFromLeft"></div>
             </div>
         </div>
         <div class="flex flex-row w-full justify-between">
@@ -109,7 +99,7 @@
                {{.Params.skillThreeName}}
             </div>
             <div class="flex flex-row w-full h-auto border-gray-300 border-2 m-0 ml-2 overflow-hidden">
-                <div class="skillThree delay"></div>
+                <div class="skillThree delaySlideInFromLeft"></div>
             </div>
         </div>
         <div class="flex flex-row w-full justify-between">
@@ -117,7 +107,7 @@
                {{.Params.skillFourName}}
             </div>
             <div class="flex flex-row w-full h-auto border-gray-300 border-2 m-0 ml-2 overflow-hidden">
-                <div class="skillFour delay ease-in-out"></div>
+                <div class="skillFour delaySlideInFromLeft ease-in-out"></div>
             </div>
         </div>  */}}
        

@@ -1,0 +1,50 @@
+{
+    "skills": [
+        {
+            "id": 1111,
+            "name": "visual-skills",
+            "title": "Visual Skills",
+            "image": "/images/work/garage1.png",
+            "stats": [
+                {
+                    "title": "CSS",
+                    "level": "50%",
+                    "color": "blue"                 
+                },
+                {
+                    "title": "HTML",
+                    "level": "80%",
+                    "color": "red"                 
+                },
+                {
+                    "title": "TailwindsCSS",
+                    "level": "70%",
+                    "color": "green"                 
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "name": "back-end-skills",
+            "title": "Back End Skills",
+            "image": "https://www.opc-router.de/wp-content/uploads/2021/03/mongodb_thumbnail.png",
+            "stats": [
+                {
+                    "title": "SQL",
+                    "level": "20%",
+                    "color": "rgba(189, 174, 114, 0.898)"                 
+                },
+                {
+                    "title": "postgresQL",
+                    "level": "50%",
+                    "color": "lightgreen"                 
+                },
+                {
+                    "title": "Express",
+                    "level": "50%",
+                    "color": "lightblue"                 
+                }
+            ]
+        }
+    ]
+}

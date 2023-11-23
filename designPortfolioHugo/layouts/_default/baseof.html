@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang='{{ .Site.LanguageCode }}'>
     {{ range .Site.Params.customJS }}
-        <link rel="stylesheet" href="{{ $.Site.BaseURL }}/{{ . }}">
+        <link rel="stylesheet" href="{{ .Site.BaseURL }}">
     {{ end }}
 {{ partial "head.html" . }}
 
@@ -11,12 +11,15 @@
     
     <main class="flex-1 grow mx-auto w-screen max-w-screen-2xl px-6 sm:px-7 xl:px-8 2xl:px-10 pt-4 sm:pt-16">
         {{- block "main" . }}{{- end }}
+        {{ if .Params.js }}
+    
+        
+       
+    {{ end }}
+
     </main>
     {{- partial "footer.html" . -}}
-    <script 
-        type="text/javascript" 
-        src="/static/js/carousel.js">
-    </script>
+
 </body>
 
 </html>

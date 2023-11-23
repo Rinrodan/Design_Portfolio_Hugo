@@ -26,5 +26,22 @@
         } else {
             document.documentElement.classList.remove('dark')
         }
+       
+
+
+    
     </script>
+    <style>
+        @keyframes slideInFromLeft {0% {transform: translateX(-100%);}100% {transform: translateX(0);} }
+        
+        .delaySlideInFromLeft {
+            animation: 2s ease-out 3s 1 slideInFromLeft ;
+        };
+        .test {
+        background-color: rgba(189, 174, 114, 0.898);
+        }
+        .statColor {
+            color: transparent;
+        }
+    </style>
 </head>

@@ -1,10 +1,43 @@
 {{ define "main" }}
+
 <article
     class="justify-self-center mx-auto px-6 mb-16 sm:px-4 md:px-0 prose dark:prose-invert prose-slate lg:prose-lg hover:prose-a:text-sky-500">
+    
     <h1>{{ .Title }}</h1>
 {{ partial "components/characterSheet.html" . }}
+
+
+{{$skillsArray := site.Data.mario.skills}}
+{{ range $skillsArray }}
+  
+    <div id="visual-skills-stats" class="flex w-full flex-col">
+        {{ if eq .name "visual-skills" }}       
+        <div class="flex font-bold pt-2 pb-2 m-auto">{{.name}}</div>
+            {{ range .stats }}
+                {{ partial "components/character-sheet/charSheetSkillChart.html" . }}
+            {{end}}
+        {{end}}
+    </div>
+    <div id="backend-skills-stats" class="flex w-full flex-col ">
+        {{ if eq .name "back-end-skills" }}       
+        <div class="flex font-bold pt-2 pb-2 m-auto">{{.name}}</div>
+            {{ range .stats }}
+                {{ partial "components/character-sheet/charSheetSkillChart.html" . }}
+            {{end}}
+        {{end}}
+    </div>
+
+{{ end }}
+
+<button 
+     
+    type="button"
+    class="bg-slate-300 pl-2 pr-2 border-2 border-black rounded-lg font-bold shadow-lg m-4 hover:scale-110 hover:bg-slate-100"
+    id="myButton">CLICK
+</button>
     {{ .Content }}
     
     
 </article>
+
 {{ end }}

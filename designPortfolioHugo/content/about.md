@@ -3,6 +3,7 @@ layout: about
 author: Mario Bustillos 
 title: About
 date: 2023-11-14
+js: js/custom.js
 description: A short description about me.
 keywords: [about, creator]
 type: about
