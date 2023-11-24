@@ -54,7 +54,7 @@
         {{ $stat := dict "color" $color "title" $title "level" $level "id" $title}}
         <div class="flex w-full bg-slate-800 m-auto pl-4">
             
-            <div class="w-3/12 mt-1 mb-1 ml-2border border-slate-500 bg-slate-200 h-min">{{$stat.title}}</div>
+            <div class="w-3/12 mt-1 mb-1 ml-2 border border-slate-500 bg-slate-200 h-min">{{$stat.title}}</div>
             <div id={{$stat.title}}{{$stat.level}}{{$stat.color}} class="w-7/12  overflow-hidden border-slate-500 border mt-1 mb-1">
                 <div class="flex flex-col statColor text-opacity-0 whitespace-nowrap overflow-hidden  delaySlideInFromLeft" title="{{$stat.level}}" value="{{$stat.color}}" aria-details="{{$stat.color}}">{{$color}}
                 </div>
