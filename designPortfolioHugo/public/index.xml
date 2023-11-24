@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hi, and welcome. on Mario Bustillos</title>
+    <link>http://example.org/</link>
+    <description>Recent content in Hi, and welcome. on Mario Bustillos</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 15 May 2019 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>About</title>
+      <link>http://example.org/about/</link>
+      <pubDate>Tue, 14 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>http://example.org/about/</guid>
+      <description>Hi there! I&amp;rsquo;m a life-long learner who loves making things and solving hard problems. I&amp;rsquo;m passionate about intuitive design and enjoy figuring out the best design for my clients. I&amp;rsquo;m a team player who has experience working in Agile and SCRUM environments. Communication is core to an effective team, and that is a big focus of mine. I also have a background in design, specifically vector art using Illustrator and Inkscape.</description>
+    </item>
+    <item>
+      <title>Computer Assisted Design</title>
+      <link>http://example.org/galleries/gallery_cad/</link>
+      <pubDate>Mon, 13 May 2019 00:00:00 +0000</pubDate>
+      <guid>http://example.org/galleries/gallery_cad/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Vector Art</title>
+      <link>http://example.org/galleries/gallery_vector/</link>
+      <pubDate>Mon, 13 May 2019 00:00:00 +0000</pubDate>
+      <guid>http://example.org/galleries/gallery_vector/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>
