@@ -1,0 +1,138 @@
+<div class="flex flex-col w-full h-auto shadow-lg p-3 bg-slate-100 border-slate-400 border-2 border-opacity-30">
+    {{ $image := .Params.thumbnail }}
+    {{ $skillOneName := .Params.skillOneName }}
+    {{ $skillOnePercent := .Params.skillOnePercent }}
+    {{ $skillTwoName := .Params.skillTwoName }}
+    {{ $skillTwoPercent := .Params.skillTwoPercent }}
+    {{ $skillThreeName := .Params.skillThreeName }}
+    {{ $skillThreePercent := site.Data.marioCharacterStats }}
+    {{ $skillFourName := .Params.skillFourName }}
+    {{ $skillFourPercent := site.Data.marioCharacterStats }}
+
+<style>
+    :root {
+        --percent1: {{.Params.skillOnePercent}};
+        --percent2: {{.Params.skillTwoPercent}};
+        --percent3: {{.Params.skillThreePercent}};
+        --percent4: {{.Params.skillFourPercent}};
+        --height: 1.5rem;
+        }
+    @keyframes slideInFromLeft {
+        0% {
+            transform: translateX(-100%);
+            opacity: .2;
+        }
+        100% {
+            transform: translateX(0);
+            opacity: 1;
+        }
+        }
+    
+    .skillOne{
+        width: var(--percent1);
+        background-color: rgba(51, 255, 0, 0.6);
+        height: var(--height)
+
+    }
+    .skillTwo{
+        width: var(--percent2);
+        background-color: rgba(0, 128, 0, 0.626);
+        height: var(--height)
+
+    }
+    .skillThree{
+        width: var(--percent3);
+        background-color: rgba(8, 148, 148, 0.62);
+        height: var(--height)
+
+        }
+    .skillFour{
+        width: var(--percent4);
+        background-color: rgba(128, 0, 26, 0.582);
+        height: var(--height)
+
+    }
+    .delay {
+        animation: 4s ease-out 1s 1 slideInFromLeft;
+    ;
+}
+
+
+</style>
+{{$skillThreePercent}}
+{{ $visualStats := site.Data.charstats.mario}} 
+
+{{ range $visualStats}}
+    {{.visual}}
+{{ end }}
+
+
+
+    
+<div class="font-bold text-center w-full border-b-2 mb-4">{{.Params.name}} Stats:</div>
+    <div class="flex flex-row columns-2 w-5/6 h-auto m-auto flex-wrap">
+    
+        <div class="flex flex-col h-full w-3/12 m-0 p-0 justify-between">
+            {{.Params.skillOneName}}
+            <br>
+            {{.Params.skillTwoName}}
+            <br>
+            {{.Params.skillThreeName}}
+            <br>
+            {{.Params.skillFourName}}
+        </div>
+        <div class="flex flex-col h-auto w-7/12 justify-evenly">
+            <div class="flex flex-row w-full h-auto border-gray-300 border-2 m-auto overflow-hidden">
+                <div class="skillOne delay"></div>
+            </div>
+            <div class="flex flex-row w-full h-auto border-gray-300 border-2  m-auto overflow-hidden">
+                <div class="skillTwo delay"></div>
+            </div>
+            <div class="flex flex-row w-full h-auto border-gray-300 border-2 m-auto overflow-hidden">
+                <div class="skillThree delay"></div>
+            </div>
+            <div class="flex flex-row w-full h-auto border-gray-300 border-2 m-auto overflow-hidden">
+                <div class="skillFour delay"></div>
+            </div>
+        </div>
+
+        {{/*  <div class="flex flex-row w-full justify-between">
+            <div class="w-3/12 m-0">
+               {{.Params.skillOneName}}
+            </div>
+            <div class="flex flex-row w-full h-auto border-gray-300 border-2 m-0 ml-2 overflow-hidden">
+                <div class="skillOne delay"></div>
+            </div>
+        </div>
+        <div class="flex flex-row w-full justify-between">
+            <div class="w-3/12 m-0">
+               {{.Params.skillTwoName}}
+            </div>
+            <div class="flex flex-row w-full h-auto border-gray-300 border-2 m-0 ml-2 overflow-hidden">
+                <div class="skillTwo delay"></div>
+            </div>
+        </div>
+        <div class="flex flex-row w-full justify-between">
+            <div class="w-3/12 m-0">
+               {{.Params.skillThreeName}}
+            </div>
+            <div class="flex flex-row w-full h-auto border-gray-300 border-2 m-0 ml-2 overflow-hidden">
+                <div class="skillThree delay"></div>
+            </div>
+        </div>
+        <div class="flex flex-row w-full justify-between">
+            <div class="w-3/12 m-0">
+               {{.Params.skillFourName}}
+            </div>
+            <div class="flex flex-row w-full h-auto border-gray-300 border-2 m-0 ml-2 overflow-hidden">
+                <div class="skillFour delay"></div>
+            </div>
+        </div>  */}}
+       
+
+        
+        
+        
+    </div>
+
+</div>
