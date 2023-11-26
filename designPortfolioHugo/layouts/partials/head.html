@@ -27,9 +27,6 @@
             document.documentElement.classList.remove('dark')
         }
        
-
-
-    
     </script>
     <style>
         @keyframes slideInFromLeft {0% {transform: translateX(-100%);}100% {transform: translateX(0);} }
@@ -42,6 +39,59 @@
         }
         .statColor {
             color: transparent;
+        }
+        .tab {
+            overflow: hidden;
+            width: 100%;
+            display:inline-flex;
+            flex-direction: row;
+            flex: none;
+           
+            justify-items: center;
+            gap: 0.5rem;
+            
+            border-color: transparent;
+            padding-left: 0.25rem;
+            padding-right: 0.25rem;
+           
+            font-size: 0.875rem;
+            line-height: 1rem;
+            color: gray;
+            font-weight: 500;
+            border-bottom: 1px solid gray;
+            & button:hover {
+                background-color: #ddddddeb;
+            }
+          }
+          .tabLinks {
+            display: flex;
+            height: 100%;
+            padding: 0.5rem;
+            width:max-content;
+            border: 4px solid transparent;
+            
+
+        }
+      
+          .tabContent {
+            display: none;
+            animation: fadeEffect 1s; /* Fading effect takes 1 second */
+          }
+          
+          /* Go from zero to full opacity */
+          @keyframes fadeEffect {
+            from {opacity: 0;}
+            to {opacity: 1;}
+            
+          }
+          /* Change background color of buttons on hover */
+    
+        
+        /* Create an active/current tablink class */
+        .tab button.active {
+            color: rgb(9, 100, 246);
+            border-bottom-color: gray;
+
         }
     </style>
 </head>
